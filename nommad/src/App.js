@@ -12,7 +12,7 @@ class App extends Component {
 
           <p>Natasha Robarge</p>
           <p>Sophia Chow</p>
-
+          <p>Raul Gutierrez</p>
         </header>
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
