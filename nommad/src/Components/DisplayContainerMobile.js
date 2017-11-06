@@ -35,7 +35,7 @@ class DisplayContainerMobile extends Component {
     let resultsArr = this.state.trucksArr.map((truck, index)=><Tile key={index} truck={truck} />);
     return (
       <div className="displayContainerMobile">
-        <button onClick={this._displayChange} />
+        <button onClick={this._displayChange}>TOGGLE</button>
 
         <div style={{display: this.state.showingTiles ? 'block' : 'none'}} >
           {resultsArr}
