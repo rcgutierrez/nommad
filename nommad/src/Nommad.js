@@ -23,6 +23,7 @@ class Nommad extends Component {
           <button type="submit">Search</button>
         </div>
 
+        <DisplayContainerDesktop />
         <DisplayContainerMobile />
 
 
