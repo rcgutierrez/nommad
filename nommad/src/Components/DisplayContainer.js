@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Tile from './Tile';
 import Map from './Map';
+import Toggle from './Toggle';
 
 class DisplayContainer extends Component {
   constructor(props){
@@ -9,6 +10,7 @@ class DisplayContainer extends Component {
   render() {
     return (
       <div className="displayContainer">
+        <Toggle />
         <Tile />
         <Tile />
         <Tile />
