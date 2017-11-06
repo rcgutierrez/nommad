@@ -4,12 +4,12 @@ var sass = require('gulp-sass');
 
 //Defining gulp tasks here
 gulp.task('styles', function() {
-    gulp.src('./public/sass/**/*.scss')
+    gulp.src('./sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./public/css/'));
+        .pipe(gulp.dest('./src/css/'));
 });
 
 //Watch task
 gulp.task('default',function() {
-    gulp.watch('./public/sass/**/*.scss',['styles']);
+    gulp.watch('./sass/**/*.scss',['styles']);
 });

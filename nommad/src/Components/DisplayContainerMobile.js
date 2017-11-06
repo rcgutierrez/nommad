@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import Tile from './Tile';
 import Map from './Map';
+
 import Profile from './Profile';
+
 
 
 class DisplayContainerMobile extends Component {
