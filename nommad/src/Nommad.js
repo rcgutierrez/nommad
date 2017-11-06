@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import './css/default.css';
 import Toggle from './Components/Toggle';
 import Nav from './Components/Nav';
-import DisplayContainer from './Components/DisplayContainer';
+import DisplayContainerMobile from './Components/DisplayContainerMobile';
+import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
 
 class Nommad extends Component {
   constructor(props){
@@ -23,7 +24,7 @@ class Nommad extends Component {
           <button type="submit">Search</button>
         </div>
 
-        <DisplayContainer />
+        <DisplayContainerDesktop />
 
 
       </div>

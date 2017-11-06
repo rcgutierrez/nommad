@@ -3,17 +3,17 @@ import Tile from './Tile';
 import Map from './Map';
 import Toggle from './Toggle';
 
-class DisplayContainer extends Component {
+class DisplayContainerMobile extends Component {
   constructor(props){
     super(props);
     this.state = {
-      
+
     }
   }
   render() {
     return (
-      <div className="displayContainer">
-        <button onClick="showTiles">
+      <div className="displayContainerMobile">
+        <button onClick="showTiles" />
         <Tile />
         <Tile />
         <Tile />
@@ -41,4 +41,4 @@ class DisplayContainer extends Component {
   }
 }
 
-export default DisplayContainer;
+export default DisplayContainerMobile;
