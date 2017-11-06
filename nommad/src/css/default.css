@@ -6,10 +6,10 @@ html {
 
 .DisplayContainerDesktop {
   display: flex;
-  flex: 5; }
+}
 
 .tile {
-  flex: 3;
+  flex: 1;
   display: inline-flex;
   background-color: red;
   color: white;
