@@ -1,22 +1,27 @@
 * {
-  border: 1px solid black; }
+  border: 1px solid black;
+}
 
 html {
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 .DisplayContainerDesktop {
   display: flex;
-  flex: 5; }
+  flex: 5;
+}
 
 .tile {
   flex: 3;
   display: inline-flex;
   background-color: red;
   color: white;
-  flex-direction: column; }
+  flex-direction: column;
+}
 
 .map {
   flex: 3;
   display: inline-flex;
   background-color: green;
-  color: white; }
+  color: white;
+}
