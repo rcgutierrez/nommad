@@ -7,34 +7,54 @@ class DisplayContainerMobile extends Component {
   constructor(props){
     super(props);
     this.state = {
+      showingTiles: true
+    }
 
+    this._displayChange = this._displayChange.bind(this);
+  }
+
+  _displayChange() {
+    if(this.state.showingTiles){
+      this.setState({
+        showingTiles: false
+      })
+    }else{
+      this.setState({
+        showingTiles: true
+      })
     }
   }
+
+
   render() {
     return (
       <div className="displayContainerMobile">
-        <button onClick="showTiles" />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Tile />
-        <Map />
+        <button onClick={this._displayChange} />
+        <div style={{display: this.state.showingTiles ? 'block' : 'none'}} >
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+          <Tile />
+        </div>
+        <div style={{display: this.state.showingTiles ? 'none' : 'block'}}>
+          <Map />
+        </div>
 
       </div>
     );
