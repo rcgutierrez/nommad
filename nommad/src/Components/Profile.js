@@ -17,7 +17,7 @@ class Profile extends Component {
 
     return (
       <div className="profile">
-
+        
       </div>
     );
   }
