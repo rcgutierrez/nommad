@@ -1,5 +1,5 @@
 * {
-  border: 1px solid black;
+  // border: 1px solid black;
 }
 
 html {
@@ -8,7 +8,7 @@ html {
 
 .DisplayContainerDesktop {
   display: flex;
-  flex: 5;
+  flex: 6;
 }
 
 .tile {
@@ -17,6 +17,15 @@ html {
   background-color: red;
   color: white;
   flex-direction: column;
+  border: 1px solid #aaaaaa;
+  height: 200px
+  width: auto;
+  @media screen and (max-height: 320px) {
+    @media screen and (min-width: 600px) {
+      height: 20px;
+      width: 45px;
+    }
+  }
 }
 
 .map {
