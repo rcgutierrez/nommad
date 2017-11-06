@@ -6,11 +6,14 @@ import Toggle from './Toggle';
 class DisplayContainer extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      
+    }
   }
   render() {
     return (
       <div className="displayContainer">
-        <Toggle />
+        <button onClick="showTiles">
         <Tile />
         <Tile />
         <Tile />
