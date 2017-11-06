@@ -1,18 +1,27 @@
 html {
   margin: 0 auto; }
 
-.DisplayContainerDesktop {
+.displayContainerMobile {
+  display: none; }
+
+.displayContainerDesktop {
   display: flex;
-}
+  flex: 6; }
 
 .tile {
-  flex: 1;
+  flex: 3;
   display: inline-flex;
   background-color: red;
   color: white;
   flex-direction: column;
   border: 1px solid #aaaaaa;
   height: 200px; }
+
+@media screen and (max-width: 800px) {
+  .displayContainerDesktop {
+    display: none; }
+  .displayContainerMobile {
+    display: block; } }
 
 .map {
   flex: 3;
