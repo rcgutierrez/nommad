@@ -7,7 +7,7 @@ class Tile extends Component {
   render() {
     return (
       <div className="tile">
-      <p> this will be a tile</p>
+      <p>{this.props.truck}</p>
 
 
       </div>

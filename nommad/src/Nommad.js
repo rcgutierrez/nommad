@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './css/default.css';
-import Toggle from './Components/Toggle';
 import Nav from './Components/Nav';
 import DisplayContainerMobile from './Components/DisplayContainerMobile';
 import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
