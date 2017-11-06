@@ -2,13 +2,16 @@ import React, { Component } from 'react';
 import Tile from './Tile';
 import Map from './Map';
 
+import Profile from './Profile';
+
+
 
 class DisplayContainerMobile extends Component {
   constructor(props){
     super(props);
     this.state = {
       showingTiles: true,
-      trucksArr: ["this is tile one", "this is tile two", "this is tile three"]
+      trucksArr: this.props.trucks
     }
 
     this._displayChange = this._displayChange.bind(this);
@@ -28,13 +31,16 @@ class DisplayContainerMobile extends Component {
 
 
   render() {
+    console.log(this.state.trucksArr);
     let resultsArr = this.state.trucksArr.map((truck, index)=><Tile key={index} truck={truck} />);
     return (
       <div className="displayContainerMobile">
         <button onClick={this._displayChange} />
+
         <div style={{display: this.state.showingTiles ? 'block' : 'none'}} >
           {resultsArr}
         </div>
+
         <div style={{display: this.state.showingTiles ? 'none' : 'block'}}>
           <Map />
         </div>
@@ -45,3 +51,6 @@ class DisplayContainerMobile extends Component {
 }
 
 export default DisplayContainerMobile;
+
+
+// {resultsArr}
