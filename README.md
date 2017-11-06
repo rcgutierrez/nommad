@@ -1,2 +1,0 @@
-# nommad
-Food Truck App
