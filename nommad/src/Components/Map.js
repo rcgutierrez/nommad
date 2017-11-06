@@ -34,15 +34,30 @@ class MapContainer extends Component {
 
 
   render() {
-
-
-
+    const style = {
+      width: '100%',
+      height: '100%'
+    }
 
     return (
-     <Map google={this.props.google} zoom={14}>
+     <Map google={this.props.google}
+      style={style}
+      initialCenter={{
+            lat: 30.267153,
+            lng: -97.743061
+          }}
+      zoom={14}
+      className={'mapstuff'}
+      onClick={this.onMapClicked}>
 
         <Marker onClick={this.onMarkerClick}
-                name={'Current location'} />
+                name={'Current location'}
+                position={{lat:30.2706345638105, lng:-97.7415420642792}}
+                icon={{
+                  url: "../../public/images/foodtruck@2x.png",
+
+                }}
+                 />
 
         <InfoWindow onClose={this.onInfoWindowClose}>
             <div>
