@@ -14,7 +14,11 @@ class Nommad extends Component {
   }
 
 
+
   render() {
+    const results = "the search results are here";
+    console.log(results);
+    let result = "ok will this?";
     return (
       <div className="App">
         <Nav />
@@ -23,8 +27,8 @@ class Nommad extends Component {
           <button type="submit">Search</button>
         </div>
 
-        <DisplayContainerDesktop />
-        <DisplayContainerMobile />
+        <DisplayContainerDesktop results={results} />
+        <DisplayContainerMobile results={result} />
 
 
       </div>
