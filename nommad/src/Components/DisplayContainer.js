@@ -1,18 +1,39 @@
 import React, { Component } from 'react';
-import './App.css';
+import Tile from './Tile';
+import Map from './Map';
 
-class App extends Component {
+class DisplayContainer extends Component {
+  constructor(props){
+    super(props);
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-
-        </header>
-
+      <div className="displayContainer">
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Tile />
+        <Map />
 
       </div>
     );
   }
 }
 
-export default App;
+export default DisplayContainer;

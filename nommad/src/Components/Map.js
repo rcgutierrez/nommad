@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './App.css';
 
-class App extends Component {
+class Map extends Component {
+  constructor(props){
+    super(props);
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-
-        </header>
+      <div className="map">
+        <p> this will be a map</p>
 
 
       </div>
@@ -15,4 +15,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Map;

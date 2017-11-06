@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
 
-import './App.css';
-
 class Search extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-
-        </header>
-
-
+      <div className="Nav">
+        <h1>nommad</h1>
       </div>
     );
   }
