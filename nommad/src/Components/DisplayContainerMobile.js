@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 import Tile from './Tile';
 import Map from './Map';
-<<<<<<< HEAD
-=======
-
 import Profile from './Profile';
 
-
->>>>>>> 973c33885d53bfc340de78034154edf80b043b60
 
 class DisplayContainerMobile extends Component {
   constructor(props){
