@@ -4,7 +4,6 @@ import Map from './Map';
 import Profile from './Profile';
 
 
-
 class DisplayContainerMobile extends Component {
   constructor(props){
     super(props);
@@ -40,7 +39,6 @@ class DisplayContainerMobile extends Component {
         <button onClick={this._displayMap}>Map</button>
 
         <div style={{display: this.state.showingTiles ? 'flex' : 'none'}} >
-          {resultsArr}
         </div>
 
         <div style={{display: this.state.showingTiles ? 'none' : 'block'}}>
