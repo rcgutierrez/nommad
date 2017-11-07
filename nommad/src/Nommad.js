@@ -160,7 +160,7 @@ class Nommad extends Component {
     return (
       <div className="App">
         <Nav />
-        <div className="seach">
+        <div className="search">
           <input type="text" placeholder="Search by Zip Code"></input>
           <button type="submit">Search</button>
         </div>

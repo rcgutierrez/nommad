@@ -33,31 +33,41 @@ class MapContainer extends Component {
   }
 
 
+  fetchPlaces(mapProps, map) {
+    const {google} = mapProps;
+    const service = new google.maps.places.PlacesService(map);
+    // ...
+  }
+
   render() {
+    const {props, state} = this,
+          {mapStyles} = props;
+
     const style = {
-      width: '100%',
-      height: '100%'
-    }
+      padding: 5,
+      width: '70%',
+      height: '70%'
+    };
 
     return (
      <Map google={this.props.google}
-      style={style}
+      styles={mapStyles}
       initialCenter={{
             lat: 30.267153,
             lng: -97.743061
           }}
       zoom={14}
-      className={'mapstuff'}
+      className={'map'}
       onClick={this.onMapClicked}>
 
         <Marker onClick={this.onMarkerClick}
                 name={'Current location'}
                 position={{lat:30.2706345638105, lng:-97.7415420642792}}
                 icon={{
-                  url: "../../public/images/foodtruck@2x.png",
-
+                  url: "./images/foodtruck@2x.png",
                 }}
                  />
+
 
         <InfoWindow onClose={this.onInfoWindowClose}>
             <div>
@@ -67,6 +77,26 @@ class MapContainer extends Component {
       </Map>
     );
   }
+}
+
+MapContainer.defaultProps ={
+  mapStyles: [{"elementType": 'geometry', "stylers": [{"color": '#242f3e'}]}, {"elementType": 'labels.text.stroke', "stylers": [{"color": '#242f3e'}]},
+            {"elementType": 'labels.text.fill', "stylers": [{"color": '#746855'}]},
+            {"featureType": 'administrative.locality', "elementType": 'labels.text.fill', "stylers": [{"color": '#d59563'}]},
+            {"featureType": 'poi', "elementType": "labels.text.fill", "stylers": [{"color": '#d59563'}]},
+            {"featureType": 'poi.park', "elementType": 'geometry', "stylers": [{"color": '#263c3f'}] },
+            {"featureType": 'poi.park', "elementType": 'labels.text.fill', "stylers": [{"color": '#6b9a76'}]},
+            {"featureType": 'road', "elementType": 'geometry', "stylers": [{"color": '#38414e'}]},
+            {"featureType": 'road', "elementType": 'geometry.stroke', "stylers": [{"color": '#212a37'}]},
+            {"featureType": 'road',"elementType": 'labels.text.fill',"stylers": [{"color": '#9ca5b3'}]},
+            {"featureType": 'road.highway', "elementType": 'geometry', "stylers": [{"color": '#746855'}]},
+            {"featureType": 'road.highway', "elementType": 'geometry.stroke', "stylers": [{"color": '#1f2835'}]},
+            {"featureType": 'road.highway', "elementType": 'labels.text.fill', "stylers": [{"color": '#f3d19c'}]},
+            {"featureType": 'transit', "elementType": 'geometry', "stylers": [{"color": '#2f3948'}]},
+            {"featureType": 'transit.station', "elementType": 'labels.text.fill', "stylers": [{"color": '#d59563'}]},
+            {"featureType": 'water', "elementType": 'geometry', "stylers": [{"color": '#17263c'}]},
+            {"featureType": 'water', "elementType": 'labels.text.fill', "stylers": [{"color": '#515c6d'}]},
+            {"featureType": 'water', "elementType": 'labels.text.stroke', "stylers": [{"color": '#17263c'}]}]
 }
 
 export default GoogleApiWrapper({

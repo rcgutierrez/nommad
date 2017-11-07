@@ -4,7 +4,8 @@ class Search extends Component {
   render() {
     return (
       <div className="Nav">
-        <h1>nommad</h1>
+        <img src={require('../images/menu.svg')} className="menu" />
+        <img src={require('../images/nommad-logo-lrg.svg')} className="nommad-logo-lrg" />
       </div>
     );
   }

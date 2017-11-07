@@ -1,25 +1,146 @@
 * {
-  border: 1px solid black;
-  margin: 5px; }
+}
 
 html {
-  margin: 0 auto; }
+  margin: 0 auto;
+}
+
+.App{
+  width: 375px;
+  height: 232px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Nav{
+ margin: 5px;
+ flex: 1;
+ justify-content: space-between;
+}
+
+.menu{
+  width: 18px;
+  height: 30px;
+  object-fit: contain;
+  background-color: #000000;
+}
+
+.nommad-logo-lrg {
+  width: 150px;
+  height: 29.7px;
+  object-fit: contain;
+  background-color: #000000;
+  color: #000000;
+}
+
+h3{
+  width: 69px;
+  height: 19px;
+  font-family: Nunito;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #07362b;
+}
+
+input[type=text]{
+    width:50%;
+    margin: 10px;
+    padding: 5px 10px;
+    display: inline-block;
+    box-sizing: border-box;
+    font-family:'Nunito', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    color: #000000;
+}
+
+button{
+    margin: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color:white;
+    padding:10px 20px;
+    border: 2px solid #B0E0E6;
+    background: #75ead0;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.search{
+  background-color: black;
+  width: 920px;
+  justify-content: space-between;
+}
 
 .displayContainerMobile {
-  display: none; }
+  display: none;
+}
 
 .displayContainerDesktop {
-  display: flex;
-  flex: 6; }
+   padding: 5px;
+   display: flex;
+}
+
+.resultTiles{
+  flex: 5;
+  padding: 5px;
+}
+
+.resultMap{
+  flex: 1;
+  padding: 5px;
+}
+
+.iconContainer{
+  float: right;
+}
+
+.nom {
+  margin: 5px;
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.bubble {
+  margin: 5px;
+  width: 29px;
+  height: 26px;
+  object-fit: contain;
+}
+
+/*.25 {
+  width: 15px;
+  height: 16px;
+  font-family: Nunito;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.25 .text-style-1 {
+  letter-spacing: normal;
+}*/
 
 .tile {
-  flex: 3;
-  display: inline-flex;
-  background-color: red;
-  color: white;
-  flex-direction: column;
-  border: 1px solid #aaaaaa;
-  height: 200px; }
+  flex: 1;
+  width: 354px;
+  height: 50px;
+  opacity: 0.9;
+  background-color: #ffffff;
+}
+
+.map {
+  flex: 1;
+  flex-grow: 2;
+  height: 50px;
+  width: 50px;
+   }
 
 @media screen and (max-width: 800px) {
   .displayContainerDesktop {
@@ -27,8 +148,4 @@ html {
   .displayContainerMobile {
     display: block; } }
 
-.map {
-  flex: 3;
-  display: inline-flex;
-  background-color: green;
-  color: white; }
+
