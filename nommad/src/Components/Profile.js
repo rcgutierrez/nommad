@@ -7,23 +7,22 @@ class Profile extends Component {
     super(props);
 
     this.state = {
-      truck: this.props.truck[0]
+      truck: this.props.truck
     }
   }
 
 
 
   render() {
+    console.log(this.state);
     return (
       <div className="profile">
 
-        <section className="picture-slides">
-          <img src={this.state.truck.image_url} width='50px' height='50px' />
-        </section>
+
 
         <section className="main-info">
             <h2>{this.state.truck.name}</h2>
-            <img src='../public/images/nommad_nommer.png' width='50px' height='50px' />
+            <img src={require('../images/nom.svg')} width='50px' height='50px' />
             <p>{this.state.truck.price}</p>
             <p>{this.state.truck.isClosed ? 'Closed' : 'Open'}</p>
         </section>
@@ -54,3 +53,7 @@ class Profile extends Component {
 }
 
 export default Profile;
+
+// <section className="picture-slides">
+//   <img src={this.state.truck.image_url} width='50px' height='50px' />
+// </section>
