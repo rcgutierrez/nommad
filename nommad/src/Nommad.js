@@ -9,38 +9,7 @@ import Profile from './Components/Profile';
 class Nommad extends Component {
   constructor(props){
     super(props);
-    this.state = {
-      isFetchingTrucks: false,
-      getRequestData: ''
-    }
-    this.getFoodTruck = this.getFoodTruck.bind(this);
-
-    componentDidMount() {
-      this.getFoodTruck();
-    }
-
-    getFoodTruck() {
-      this.setState({
-        isFetchingTrucks: true
-      });
-
-
-
-      let YELP_API_LINK = 'Input Yelp API link here';
-      axios.get(YELP_API_LINK)
-           .then((response) => {
-             console.log(response.data.value);
-             // let newFoodTruck = response.data.value
-             //update state with Food Truck data
-             //Re render it in UI
-             this.setState({
-               foodTruckData: response.data.value,
-               isFetchingTrucks: false
-             });
-           }).catch(error => {
-             console.log(`Error, ${error}`);
-           });
-      }
+  }
 
     this.state = {
       trucksArr: [
