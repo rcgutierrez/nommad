@@ -45,8 +45,8 @@ class MapContainer extends Component {
 
     const style = {
       padding: 5,
-      width: '70%',
-      height: '70%'
+      width: '100%',
+      height: '100%'
     };
 
     return (
@@ -60,20 +60,20 @@ class MapContainer extends Component {
       className={'map'}
       onClick={this.onMapClicked}>
 
-        <Marker onClick={this.onMarkerClick}
-                name={'Current location'}
-                position={{lat:30.2706345638105, lng:-97.7415420642792}}
-                icon={{
-                  url: "./images/foodtruck@2x.png",
-                }}
-                 />
+        <Marker
+          name={'Current location'}
+          position={{lat:30.2706345638105, lng:-97.7415420642792}}
+          icon={{
+            url: "./images/truck.svg",
+          }}
+           />
 
 
-        <InfoWindow onClose={this.onInfoWindowClose}>
+        {/*<InfoWindow onClose={this.onInfoWindowClose}>
             <div>
               <h1>{this.state.selectedPlace.name}</h1>
             </div>
-        </InfoWindow>
+        </InfoWindow>*/}
       </Map>
     );
   }
