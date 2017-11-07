@@ -1,42 +1,43 @@
-* {
-}
+$five-px: 5px;
+$nunito-font: 'Nunito', sans-serif;
+$black: #000;
 
 html {
   margin: 0 auto;
 }
 
-.App{
+.App {
   width: 375px;
   height: 232px;
   display: flex;
   flex-direction: column;
 }
 
-.Nav{
- margin: 5px;
+.Nav {
+ margin: $five-px;
  flex: 1;
  justify-content: space-between;
 }
 
-.menu{
+.menu {
   width: 18px;
   height: 30px;
   object-fit: contain;
-  background-color: #000000;
+  background-color: $black;
 }
 
 .nommad-logo-lrg {
   width: 150px;
   height: 29.7px;
   object-fit: contain;
-  background-color: #000000;
-  color: #000000;
+  background-color: $black;
+  color: $black;
 }
 
-h3{
+h3 {
   width: 69px;
   height: 19px;
-  font-family: Nunito;
+  font-family: $nunito-font;
   font-size: 14px;
   letter-spacing: 1px;
   text-align: left;
@@ -49,29 +50,29 @@ input[type=text]{
     padding: 5px 10px;
     display: inline-block;
     box-sizing: border-box;
-    font-family:'Nunito', sans-serif;
+    font-family: $nunito-font;
     font-size: 16px;
     text-align: left;
-    color: #000000;
+    color: $black;
 }
 
-button{
+button {
     margin: 20px;
     font-size: 14px;
     font-weight: bold;
-    color:white;
-    padding:10px 20px;
+    color: white;
+    padding: 10px 20px;
     border: 2px solid #B0E0E6;
     background: #75ead0;
-    border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
+    border: 0 none;
+    cursor: pointer;
+    -webkit-border-radius: $five-px;
+    border-radius: $five-px;
     box-sizing: border-box;
 }
 
-.search{
-  background-color: black;
+.search {
+  background-color: $black;
   width: 920px;
   justify-content: space-between;
 }
@@ -81,18 +82,18 @@ button{
 }
 
 .displayContainerDesktop {
-   padding: 5px;
+   padding: $five-px;
    display: flex;
 }
 
 .resultTiles{
   flex: 5;
-  padding: 5px;
+  padding: $five-px;
 }
 
 .resultMap{
   flex: 1;
-  padding: 5px;
+  padding: $five-px;
 }
 
 .iconContainer{
@@ -100,14 +101,14 @@ button{
 }
 
 .nom {
-  margin: 5px;
+  margin: $five-px;
   width: 30px;
   height: 30px;
   object-fit: contain;
 }
 
 .bubble {
-  margin: 5px;
+  margin: $five-px;
   width: 29px;
   height: 26px;
   object-fit: contain;
@@ -132,7 +133,7 @@ button{
   width: 354px;
   height: 50px;
   opacity: 0.9;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .map {
@@ -140,10 +141,13 @@ button{
   flex-grow: 2;
   height: 50px;
   width: 50px;
-   }
+}
 
 @media screen and (max-width: 800px) {
   .displayContainerDesktop {
-    display: none; }
+    display: none;
+  }
   .displayContainerMobile {
-    display: block; } }
+    display: block;
+  }
+}
