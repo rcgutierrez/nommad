@@ -17,48 +17,135 @@ class Nommad extends Component {
            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/haq5ytA_xtpj9m-sVHzjyA/o.jpg",
            "is_closed": false,
            "url": "https://www.yelp.com/biz/chilantro-austin?adjust_creative=O5Q0Q2neGOLY6zUlCa3fKQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=O5Q0Q2neGOLY6zUlCa3fKQ",
-           "review_count": 699
-         }],
+           "review_count": 699,
+           "categories": [
+               {
+                   "alias": "korean",
+                   "title": "Korean"
+               },
+               {
+                   "alias": "foodtrucks",
+                   "title": "Food Trucks"
+               },
+               {
+                   "alias": "bbq",
+                   "title": "Barbeque"
+               }
+           ],
+           "rating": 4,
+           "coordinates": {
+               "latitude": 30.2706345638105,
+               "longitude": -97.7415420642792
+           },
+           "transactions": [],
+           "price": "$",
+           "location": {
+               "address1": "823 Congress Ave",
+               "address2": null,
+               "address3": "",
+               "city": "Austin",
+               "zip_code": "78701",
+               "country": "US",
+               "state": "TX",
+               "display_address": [
+                   "823 Congress Ave",
+                   "Austin, TX 78701"
+               ]
+           },
+           "phone": "+15128009098",
+           "display_phone": "(512) 800-9098",
+           "distance": 130.71968757099998
+        }],
         [{
            "id": "chilantro-austin",
            "name": "Chi'Lantro2",
            "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/haq5ytA_xtpj9m-sVHzjyA/o.jpg",
            "is_closed": false,
            "url": "https://www.yelp.com/biz/chilantro-austin?adjust_creative=O5Q0Q2neGOLY6zUlCa3fKQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=O5Q0Q2neGOLY6zUlCa3fKQ",
-           "review_count": 699
-         }],
+           "review_count": 699,
+           "categories": [
+               {
+                   "alias": "korean",
+                   "title": "Korean"
+               },
+               {
+                   "alias": "foodtrucks",
+                   "title": "Food Trucks"
+               },
+               {
+                   "alias": "bbq",
+                   "title": "Barbeque"
+               }
+           ],
+           "rating": 4,
+           "coordinates": {
+               "latitude": 30.2706345638105,
+               "longitude": -97.7415420642792
+           },
+           "transactions": [],
+           "price": "$",
+           "location": {
+               "address1": "823 Congress Ave",
+               "address2": null,
+               "address3": "",
+               "city": "Austin",
+               "zip_code": "78701",
+               "country": "US",
+               "state": "TX",
+               "display_address": [
+                   "823 Congress Ave",
+                   "Austin, TX 78701"
+               ]
+           },
+           "phone": "+15128009098",
+           "display_phone": "(512) 800-9098",
+           "distance": 130.71968757099998
+        }],
          [{
             "id": "chilantro-austin",
             "name": "Chi'Lantro3",
             "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/haq5ytA_xtpj9m-sVHzjyA/o.jpg",
             "is_closed": false,
             "url": "https://www.yelp.com/biz/chilantro-austin?adjust_creative=O5Q0Q2neGOLY6zUlCa3fKQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=O5Q0Q2neGOLY6zUlCa3fKQ",
-            "review_count": 699
-          }],
-          [{
-             "id": "chilantro-austin",
-             "name": "Chi'Lantro4",
-             "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/haq5ytA_xtpj9m-sVHzjyA/o.jpg",
-             "is_closed": false,
-             "url": "https://www.yelp.com/biz/chilantro-austin?adjust_creative=O5Q0Q2neGOLY6zUlCa3fKQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=O5Q0Q2neGOLY6zUlCa3fKQ",
-             "review_count": 699
-           }],
-           [{
-              "id": "chilantro-austin",
-              "name": "Chi'Lantro5",
-              "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/haq5ytA_xtpj9m-sVHzjyA/o.jpg",
-              "is_closed": false,
-              "url": "https://www.yelp.com/biz/chilantro-austin?adjust_creative=O5Q0Q2neGOLY6zUlCa3fKQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=O5Q0Q2neGOLY6zUlCa3fKQ",
-              "review_count": 699
-            }],
-            [{
-               "id": "chilantro-austin",
-               "name": "Chi'Lantro6",
-               "image_url": "https://s3-media3.fl.yelpcdn.com/bphoto/haq5ytA_xtpj9m-sVHzjyA/o.jpg",
-               "is_closed": false,
-               "url": "https://www.yelp.com/biz/chilantro-austin?adjust_creative=O5Q0Q2neGOLY6zUlCa3fKQ&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=O5Q0Q2neGOLY6zUlCa3fKQ",
-               "review_count": 699
-             }]
+            "review_count": 699,
+            "categories": [
+                {
+                    "alias": "korean",
+                    "title": "Korean"
+                },
+                {
+                    "alias": "foodtrucks",
+                    "title": "Food Trucks"
+                },
+                {
+                    "alias": "bbq",
+                    "title": "Barbeque"
+                }
+            ],
+            "rating": 4,
+            "coordinates": {
+                "latitude": 30.2706345638105,
+                "longitude": -97.7415420642792
+            },
+            "transactions": [],
+            "price": "$",
+            "location": {
+                "address1": "823 Congress Ave",
+                "address2": null,
+                "address3": "",
+                "city": "Austin",
+                "zip_code": "78701",
+                "country": "US",
+                "state": "TX",
+                "display_address": [
+                    "823 Congress Ave",
+                    "Austin, TX 78701"
+                ]
+            },
+            "phone": "+15128009098",
+            "display_phone": "(512) 800-9098",
+            "distance": 130.71968757099998
+         }]
         ]
       }
   }
@@ -75,10 +162,16 @@ class Nommad extends Component {
           <button type="submit">Search</button>
         </div>
 
+
         <DisplayContainerDesktop trucks={this.state.trucksArr} />
         <div className="mobileView">
           <DisplayContainerMobile trucks={this.state.trucksArr} />
         </div>
+
+        <DisplayContainerMobile trucks={this.state.trucksArr} />
+        <DisplayContainerDesktop trucks={this.state.trucksArr} />
+
+
       </div>
     );
   }
