@@ -17,8 +17,11 @@ class Tile extends Component {
       };
     return (
       <div className="tile" style={ sectionStyle }>
-        <h3>{this.state.truck.name}</h3>
-
+         <h3>{this.state.truck.name}</h3>
+        <div className="iconContainer">
+          <img src={require('../images/nom.svg')} className="nom" />
+          <img src={require('../images/bubble.svg')} className="bubble" />
+        </div>
 
 
       </div>

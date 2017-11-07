@@ -37,7 +37,7 @@ class DisplayContainerMobile extends Component {
       <div className="displayContainerMobile">
         <button onClick={this._displayChange}>TOGGLE</button>
 
-        <div style={{display: this.state.showingTiles ? 'block' : 'none'}} >
+        <div style={{display: this.state.showingTiles ? 'flex' : 'none'}} >
           {resultsArr}
         </div>
 
