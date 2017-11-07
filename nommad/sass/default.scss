@@ -76,6 +76,7 @@ button{
 .resultTiles{
   flex: 5;
   padding: 5px;
+  overflow-y: scroll;
 }
 .resultMap{
   flex: 1;

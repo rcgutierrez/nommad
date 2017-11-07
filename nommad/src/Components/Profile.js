@@ -14,26 +14,22 @@ class Profile extends Component {
 
 
   render() {
+    console.log(this.state.truck);
     return (
       <div className="profile">
 
 
 
         <section className="main-info">
-            <h2>{this.state.truck.name}</h2>
-            <img src={require('../images/nom.svg')} width='50px' height='50px' />
-            <p>{this.state.truck.price}</p>
+
+            <h5>Price:{this.state.truck.price}</h5>
             <p>{this.state.truck.isClosed ? 'Closed' : 'Open'}</p>
         </section>
 
         <section className="bio">
-          <h4>Bio</h4>
+          <h4>{this.state.truck.location.address1}</h4>
         </section>
 
-
-        <section className="locationMap">
-          <p>this section will be a map</p>
-        </section>
 
         <section className="ratings">
           <p>Yelp Rating: {this.state.truck.rating}</p>

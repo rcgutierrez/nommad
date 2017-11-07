@@ -73,8 +73,10 @@ button{
   flex: 50%;
   padding: 5px;
   position: relative;
+  height: 725px;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 .resultMap{
   flex: 50%;
