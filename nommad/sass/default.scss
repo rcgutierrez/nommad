@@ -1,42 +1,43 @@
 $five-px: 5px;
 $nunito-font: 'Nunito', sans-serif;
+$black: #000;
 
 html {
   margin: 0 auto;
 }
 
-.App{
+.App {
   width: 375px;
   height: 232px;
   display: flex;
   flex-direction: column;
 }
 
-.Nav{
+.Nav {
  margin: $five-px;
  flex: 1;
  justify-content: space-between;
 }
 
-.menu{
+.menu {
   width: 18px;
   height: 30px;
   object-fit: contain;
-  background-color: #000000;
+  background-color: $black;
 }
 
 .nommad-logo-lrg {
   width: 150px;
   height: 29.7px;
   object-fit: contain;
-  background-color: #000000;
-  color: #000000;
+  background-color: $black;
+  color: $black;
 }
 
-h3{
+h3 {
   width: 69px;
   height: 19px;
-  font-family: Nunito;
+  font-family: $nunito-font;
   font-size: 14px;
   letter-spacing: 1px;
   text-align: left;
@@ -52,7 +53,7 @@ input[type=text]{
     font-family: $nunito-font;
     font-size: 16px;
     text-align: left;
-    color: #000000;
+    color: $black;
 }
 
 button {
@@ -71,7 +72,7 @@ button {
 }
 
 .search {
-  background-color: black;
+  background-color: $black;
   width: 920px;
   justify-content: space-between;
 }
@@ -132,7 +133,7 @@ button {
   width: 354px;
   height: 50px;
   opacity: 0.9;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .map {
