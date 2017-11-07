@@ -5,6 +5,7 @@ import Nav from './Components/Nav';
 import DisplayContainerMobile from './Components/DisplayContainerMobile';
 import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
 import Profile from './Components/Profile';
+import Map from './Components/Map';
 
 class Nommad extends Component {
   constructor(props){
@@ -56,13 +57,8 @@ class Nommad extends Component {
           <button type="submit">Search</button>
         </div>
 
-        <DisplayContainerDesktop trucks={ truckInfoArr }/>
-        <div className="mobileView">
-          <DisplayContainerMobile trucks={ truckInfoArr }/>
-        </div>
-
-        <DisplayContainerMobile trucks={ truckInfoArr }/>
-        <DisplayContainerDesktop  trucks={ truckInfoArr }/>
+        <DisplayContainerMobile trucks={this.truckInfoArr} />
+        <DisplayContainerDesktop trucks={this.truckInfoArr} />
 
 
       </div>
