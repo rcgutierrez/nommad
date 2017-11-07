@@ -29,13 +29,14 @@ class DisplayContainerMobile extends Component {
 
 
   render() {
-    console.log(this.state.trucksArr);
+    
     let resultsArr = this.state.trucksArr.map((truck, index)=><Tile key={index} truck={truck} />);
+    let profileArr = this.state.trucksArr.map((truck, index)=><Profile key={index} truck={truck}/>)
     return (
       <div className="displayContainerMobile">
         <button onClick={this._displayChange}>TOGGLE</button>
 
-        <div style={{display: this.state.showingTiles ? 'block' : 'none'}} >
+        <div style={{display: this.state.showingTiles ? 'flex' : 'none'}} >
           {resultsArr}
         </div>
 
