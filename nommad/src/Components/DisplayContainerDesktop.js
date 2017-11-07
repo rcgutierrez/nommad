@@ -16,13 +16,14 @@ class DisplayContainerDesktop extends Component {
   }
   render() {
     let resultsArr = this.state.trucksArr.map((truck, index)=><Tile key={index} truck={truck} />);
+
     return (
       <div className="displayContainerDesktop">
         <div className="resultTiles">
           {resultsArr}
         </div>
         <div className="resultMap">
-          <Map />
+          <Map trucks={this.state.trucksArr} />
         </div>
       </div>
     );

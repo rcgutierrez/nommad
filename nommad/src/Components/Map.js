@@ -8,6 +8,7 @@ class MapContainer extends Component {
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
+      trucks: this.props.trucks
     }
 
     // binding this to event-handler functions
@@ -23,6 +24,13 @@ class MapContainer extends Component {
     });
   }
 
+  onInfoWindowClose(){
+    this.setState({
+      showingInfoWindow: false,
+      activeMarker: null
+    })
+  }
+
   onMapClicked(props) {
     if (this.state.showingInfoWindow) {
       this.setState({
@@ -32,25 +40,28 @@ class MapContainer extends Component {
     }
   }
 
+// fetchPlaces(mapProps, map) {
+//   const google = mapProps;
+//   const service = new google.maps.places.PlacesService(map);
+//   // ...
+// };
 
-  fetchPlaces(mapProps, map) {
-    const {google} = mapProps;
-    const service = new google.maps.places.PlacesService(map);
-    // ...
-  }
 
   render() {
+    let resultsArr = (
+      <Marker
+          name={'Current location'}
+          position={{lat:30.2706345638105, lng:-97.7415420642792}}
+           />
+           );
+    console.log(this.state.trucks);
+    resultsArr = this.state.trucks.map(function(truck, index) {return (<Marker key={index} name={truck.name} position={{lat:truck.coordinates.latitude, lng:truck.coordinates.longitude }} />) });
     const {props, state} = this,
           {mapStyles} = props;
 
-    const style = {
-      padding: 5,
-      width: '100%',
-      height: '100%'
-    };
-
     return (
      <Map google={this.props.google}
+     onReady={this.fetchPlaces}
       styles={mapStyles}
       initialCenter={{
             lat: 30.267153,
@@ -60,13 +71,11 @@ class MapContainer extends Component {
       className={'map'}
       onClick={this.onMapClicked}>
 
-        <Marker
+        {resultsArr}
+        {/*<Marker
           name={'Current location'}
           position={{lat:30.2706345638105, lng:-97.7415420642792}}
-          icon={{
-            url: "./images/truck.svg",
-          }}
-           />
+           />*/}
 
 
         {/*<InfoWindow onClose={this.onInfoWindowClose}>
