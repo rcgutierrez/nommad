@@ -30,7 +30,7 @@ class Tile extends Component {
         height: "100%",
         backgroundImage: `url(${this.state.truck.image_url})`
       };
-      console.log(this.state.truck);
+      
     return (
       <div className="tile" style={ sectionStyle } onClick={this._showProfile}>
          <h3>{this.state.truck.name}</h3>

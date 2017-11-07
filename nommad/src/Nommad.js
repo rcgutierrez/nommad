@@ -5,6 +5,7 @@ import Nav from './Components/Nav';
 import DisplayContainerMobile from './Components/DisplayContainerMobile';
 import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
 import Profile from './Components/Profile';
+import Map from './Components/Map';
 
 class Nommad extends Component {
   constructor(props){
@@ -162,12 +163,6 @@ class Nommad extends Component {
         <div className="search">
           <input type="text" placeholder="Search by Zip Code"></input>
           <button type="submit">Search</button>
-        </div>
-
-        //<DisplayContainerDesktop trucks={this.state.isFetchingTrucks ? 'Loading food trucks...' : this.state.foodTruckData } />
-        <DisplayContainerDesktop trucks={this.state.trucksArr} />
-        <div className="mobileView">
-          <DisplayContainerMobile trucks={this.state.trucksArr} />
         </div>
 
         <DisplayContainerMobile trucks={this.state.trucksArr} />
