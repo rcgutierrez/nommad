@@ -6,7 +6,7 @@ class Tile extends Component {
     super(props);
 
     this.state = {
-      truck: this.props.truck[0],
+      truck: this.props.truck,
       isProfileShowing: false
     }
     this._showProfile = this._showProfile.bind(this);

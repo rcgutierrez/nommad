@@ -45,7 +45,6 @@ class Nommad extends Component {
     let truckInfo = this.state.getRequestData;
     let truckInfoArr = [];
     for (var i = 0; i < truckInfo.length; i++){
-      console.log(truckInfo[i].name);
       let truck = truckInfo[i];
       truckInfoArr.push(truckInfo[i]);
     }
@@ -57,13 +56,13 @@ class Nommad extends Component {
           <button type="submit">Search</button>
         </div>
 
-        <DisplayContainerDesktop trucks={this.truckInfoArr}/>
+        <DisplayContainerDesktop trucks={ truckInfoArr }/>
         <div className="mobileView">
-          <DisplayContainerMobile trucks={this.truckInfoArr}/>
+          <DisplayContainerMobile trucks={ truckInfoArr }/>
         </div>
 
-        <DisplayContainerMobile trucks={this.truckInfoArr}/>
-        <DisplayContainerDesktop  trucks={this.truckInfoArr}/>
+        <DisplayContainerMobile trucks={ truckInfoArr }/>
+        <DisplayContainerDesktop  trucks={ truckInfoArr }/>
 
 
       </div>
