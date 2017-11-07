@@ -38,12 +38,14 @@ class Tile extends Component {
         width: "100%",
         height: "100%",
         backgroundImage: `url(${this.state.truck.image_url})`,
-        backgroundSize: "cover"
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        textShadow: "0px 0px 2px white"
       };
 
     return (
       <div className="tile" style={ sectionStyle } onClick={this._showProfile}>
-         <h4>{this.state.truck.name}</h4>
+         <h4 style={{display: this.state.isProfileShowing ? 'none' : 'block'}}>{this.state.truck.name}</h4>
         <div className="iconContainer" onclick={this._addNom}>
           <img src={require('../images/nom.svg')} className="nom" />
           <img src={require('../images/bubble.svg')} className="bubble" ></img>

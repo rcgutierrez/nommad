@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-
-
 class Profile extends Component {
   constructor(props){
     super(props);
@@ -21,13 +19,13 @@ class Profile extends Component {
 
 
         <section className="main-info">
-
+            <h2>{this.state.truck.name}</h2>
             <h5>Price:{this.state.truck.price}</h5>
             <p>{this.state.truck.isClosed ? 'Closed' : 'Open'}</p>
         </section>
 
         <section className="bio">
-          <h4>{this.state.truck.location.address1}</h4>
+          <h5>{this.state.truck.location.address1}</h5>
         </section>
 
 
