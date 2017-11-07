@@ -7,9 +7,18 @@ class Tile extends Component {
 
     this.state = {
       truck: this.props.truck,
-      isProfileShowing: false
+      isProfileShowing: false,
+      nomCount: 0
+
     }
     this._showProfile = this._showProfile.bind(this);
+    this._addNom = this._addNom.bind(this);
+  }
+
+  _addNom() {
+    this.setState({
+      nomCount: this.nomCount++
+    })
   }
 
   _showProfile() {
@@ -26,20 +35,20 @@ class Tile extends Component {
 
   render() {
     let sectionStyle = {
-        width: "100%",
-        height: "100%",
+        width: "55vh",
+        height: "55vh",
         backgroundImage: `url(${this.state.truck.image_url})`,
-        backgroundSize: "cover"
+        backgroundSize: 'cover'
       };
 
     return (
       <div className="tile" style={ sectionStyle } onClick={this._showProfile}>
          <h4>{this.state.truck.name}</h4>
-        <div className="iconContainer">
+        <div className="iconContainer" onClick={this._addNom}>
           <img src={require('../images/nom.svg')} className="nom" />
           <img src={require('../images/bubble.svg')} className="bubble" />
         </div>
-        <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none', height: '50vh'}}>
+        <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none', height:'50vh'}}>
           <Profile truck={this.state.truck} />
         </div>
       </div>
