@@ -14,7 +14,7 @@ class Profile extends Component {
 
 
   render() {
-    console.log(this.state.truck);
+    console.log(this.state.truck.name);
     return (
       <div className="profile">
 
