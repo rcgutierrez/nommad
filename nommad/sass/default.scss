@@ -1,30 +1,25 @@
 * {
 }
-
 html {
   margin: 0 auto;
 }
-
 .App{
   width: 375px;
   height: 232px;
   display: flex;
   flex-direction: column;
 }
-
 .Nav{
  margin: 5px;
  flex: 1;
  justify-content: space-between;
 }
-
 .menu{
   width: 18px;
   height: 30px;
   object-fit: contain;
   background-color: #000000;
 }
-
 .nommad-logo-lrg {
   width: 150px;
   height: 29.7px;
@@ -32,7 +27,6 @@ html {
   background-color: #000000;
   color: #000000;
 }
-
 h3{
   width: 69px;
   height: 19px;
@@ -42,7 +36,6 @@ h3{
   text-align: left;
   color: #07362b;
 }
-
 input[type=text]{
     width:50%;
     margin: 10px;
@@ -54,7 +47,6 @@ input[type=text]{
     text-align: left;
     color: #000000;
 }
-
 button{
     margin: 20px;
     font-size: 14px;
@@ -69,50 +61,41 @@ button{
     border-radius: 5px;
     box-sizing: border-box;
 }
-
 .search{
   background-color: black;
   width: 920px;
   justify-content: space-between;
 }
-
 .displayContainerMobile {
   display: none;
 }
-
 .displayContainerDesktop {
    padding: 5px;
    display: flex;
 }
-
 .resultTiles{
   flex: 5;
   padding: 5px;
 }
-
 .resultMap{
   flex: 1;
   padding: 5px;
 }
-
 .iconContainer{
   float: right;
 }
-
 .nom {
   margin: 5px;
   width: 30px;
   height: 30px;
   object-fit: contain;
 }
-
 .bubble {
   margin: 5px;
   width: 29px;
   height: 26px;
   object-fit: contain;
 }
-
 /*.25 {
   width: 15px;
   height: 16px;
@@ -122,11 +105,9 @@ button{
   text-align: left;
   color: #ffffff;
 }
-
 .25 .text-style-1 {
   letter-spacing: normal;
 }*/
-
 .tile {
   flex: 1;
   width: 354px;
@@ -134,14 +115,12 @@ button{
   opacity: 0.9;
   background-color: #ffffff;
 }
-
 .map {
   flex: 1;
   flex-grow: 2;
   height: 50px;
   width: 50px;
    }
-
 @media screen and (max-width: 800px) {
   .displayContainerDesktop {
     display: none; }

@@ -35,8 +35,8 @@ class Tile extends Component {
 
   render() {
     let sectionStyle = {
-        width: "55vh",
-        height: "55vh",
+        width: "100%",
+        height: "100%",
         backgroundImage: `url(${this.state.truck.image_url})`,
         backgroundSize: 'cover'
       };
@@ -48,7 +48,7 @@ class Tile extends Component {
           <img src={require('../images/nom.svg')} className="nom" />
           <img src={require('../images/bubble.svg')} className="bubble" />
         </div>
-        <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none', height:'50vh'}}>
+        <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none'}}>
           <Profile truck={this.state.truck} />
         </div>
       </div>
