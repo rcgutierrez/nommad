@@ -31,9 +31,6 @@ class Profile extends Component {
           <h4>Bio</h4>
         </section>
 
-        <section className="menu">
-          <h4>Menu</h4>
-        </section>
 
         <section className="locationMap">
           <p>this section will be a map</p>

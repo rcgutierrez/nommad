@@ -8,8 +8,7 @@ class DisplayContainerMobile extends Component {
   constructor(props){
     super(props);
     this.state = {
-      showingTiles: true,
-      trucksArr: this.props.trucks
+      showingTiles: true
     }
 
     this._displayMap = this._displayMap.bind(this);
@@ -30,8 +29,8 @@ class DisplayContainerMobile extends Component {
 
 
   render() {
-    let resultsArr = this.state.trucksArr.map((truck, index)=><Tile key={index} truck={truck} />);
-    let profileArr = this.state.trucksArr.map((truck, index)=><Profile key={index} truck={truck}/>)
+    var truckComponents = this.props.trucks.map((truckData)=>
+      <Tile key={truckData.id} truck={truckData}/>);
 
     return (
       <div className="displayContainerMobile">
@@ -39,6 +38,7 @@ class DisplayContainerMobile extends Component {
         <button onClick={this._displayMap}>Map</button>
 
         <div style={{display: this.state.showingTiles ? 'flex' : 'none'}} >
+          {truckComponents}
         </div>
 
         <div style={{display: this.state.showingTiles ? 'none' : 'block'}}>

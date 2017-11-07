@@ -12,9 +12,9 @@ class DisplayContainerDesktop extends Component {
   //   }
   // }
   render() {
-    var truckComponents = this.props.trucks.map((truckData=>
+    var truckComponents = this.props.trucks.map((truckData)=>
       <Tile key={truckData.id} truck={truckData}/>
-    ));
+    );
     return (
       <div className="displayContainerDesktop">
         <div className="resultTiles">
