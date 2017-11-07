@@ -140,10 +140,13 @@ button{
   flex-grow: 2;
   height: 50px;
   width: 50px;
-   }
+}
 
 @media screen and (max-width: 800px) {
   .displayContainerDesktop {
-    display: none; }
+    display: none;
+  }
   .displayContainerMobile {
-    display: block; } }
+    display: block;
+  }
+}
