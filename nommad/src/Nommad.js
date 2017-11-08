@@ -12,14 +12,18 @@ class Nommad extends Component {
   }
 
     //I'm sorry
-  
+  }
 
 
 
   render() {
-
-
-
+    let truckInfo = this.state.getRequestData;
+    let truckInfoArr = [];
+    for (var i = 0; i < truckInfo.length; i++){
+      let truck = truckInfo[i];
+      truckInfoArr.push(truckInfo[i]);
+    }
+    console.log(truckInfoArr);
     return (
       <div className="App">
         <Nav />
@@ -28,7 +32,7 @@ class Nommad extends Component {
           <button type="submit">Search</button>
         </div>
 
-        
+        //<DisplayContainerDesktop trucks={this.state.isFetchingTrucks ? 'Loading food trucks...' : this.state.foodTruckData } />
         <DisplayContainerDesktop trucks={this.state.trucksArr} />
         <div className="mobileView">
           <DisplayContainerMobile trucks={this.state.trucksArr} />
