@@ -6,7 +6,7 @@ import DisplayContainerMobile from './Components/DisplayContainerMobile';
 import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
 import Profile from './Components/Profile';
 import MapContainer from './Components/MapContainer';
-
+//sophia delete this
 class Nommad extends Component {
   constructor(props){
     super(props);
