@@ -51,10 +51,12 @@ class Nommad extends Component {
     }
     return (
       <div className="App">
-        <Nav />
-        <div className="search">
-          <input type="text" placeholder="Search by Zip Code"></input>
-          <button type="submit">Search</button>
+        <div className="nav-bar">
+          <Nav />
+          <div className="search">
+            <input type="text" placeholder="Search by Zip Code"></input>
+            <button type="submit">Search</button>
+          </div>
         </div>
 
        {/* <DisplayContainerMobile trucks={truckInfoArr} />*/}

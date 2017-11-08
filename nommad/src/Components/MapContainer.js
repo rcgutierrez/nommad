@@ -77,7 +77,7 @@ class MapContainer extends Component {
       zoom={14}
       className={'map'}
       onClick={this.onMapClicked}>
-        {truckComponents}
+        {truckComponents }
        {/* <Marker
           name={'Current location'}
           position={{lat:30.2706345638105, lng:-97.7415420642792}}
