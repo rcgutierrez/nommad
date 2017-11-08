@@ -34,9 +34,9 @@ class Profile extends Component {
           <p>Yelp Rating: {this.state.truck.rating}</p>
         </section>
 
-        <section className="userPics">
+        {/*<section className="userPics">
           <p>tiles of user pics</p>
-        </section>
+        </section>*/}
 
       </div>
     );
