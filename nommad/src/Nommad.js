@@ -49,6 +49,7 @@ class Nommad extends Component {
       let truck = truckInfo[i];
       truckInfoArr.push(truckInfo[i]);
     }
+    console.log(truckInfoArr);
     return (
       <div className="App">
         <Nav />
