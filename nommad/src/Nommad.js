@@ -16,13 +16,13 @@ class Nommad extends Component {
     this.getZipCode = this.getZipCode.bind(this);
       }
         componentDidMount() {
-          this.getFoodTruck();
+          this.getFoodTruck('78701');
         }
-        getFoodTruck() {
+        getFoodTruck(zip) {
           this.setState({
             isFetchingTrucks: true
           })
-          const yelpApi = 'https://nommad-backend.herokuapp.com/api';
+          const yelpApi = 'https://nommad-backend.herokuapp.com/api/' + zip;
           axios.get(yelpApi)
              .then((response) => {
                console.log(response);
@@ -40,12 +40,14 @@ class Nommad extends Component {
             getRequestData: ''
           });
           let truckInfoArr = [];
-          let data = this.state.getRequestData;
+
           let zip = document.querySelector("input").value;
+          this.getFoodTruck(zip);
+          let data = this.state.getRequestData;
             console.log(zip, ' zip');
             data.forEach(obj => {
               // console.log(typeof obj.location.zip_code, ' objects')
-              if(obj.location.zip_code === zip || obj.distance <= 3500) {
+              if(obj.location.zip_code === zip) {
                 console.log(`Data match`)
                 truckInfoArr.push(obj);
               }
