@@ -99,11 +99,11 @@ button{
 }
 .tile {
   flex: 1;
-  width: 354px;
-  height: 50px;
+  justify-content: space-between;
   opacity: 0.9;
   background-color: #ffffff;
 }
+
 .map {
   flex: 1;
   flex-grow: 2;
@@ -113,5 +113,4 @@ button{
 @media screen and (max-width: 800px) {
   .displayContainerDesktop {
     display: none; }
-  .displayContainerMobile {
-    display: block; } }
+  }

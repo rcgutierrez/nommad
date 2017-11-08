@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Tile from './Tile';
-import Map from './Map';
+import MapContainer from './MapContainer';
 import Profile from './Profile';
 
 
@@ -8,7 +8,8 @@ class DisplayContainerMobile extends Component {
   constructor(props){
     super(props);
     this.state = {
-      showingTiles: true
+      showingTiles: true,
+      trucksArr: this.props.trucks
     }
 
     this._displayMap = this._displayMap.bind(this);
@@ -42,7 +43,7 @@ class DisplayContainerMobile extends Component {
         </div>
 
         <div style={{display: this.state.showingTiles ? 'none' : 'block'}}>
-          <Map />
+           <MapContainer trucks={this.state.trucksArr} />
         </div>
 
       </div>

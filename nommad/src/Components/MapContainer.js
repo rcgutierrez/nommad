@@ -4,10 +4,12 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 class MapContainer extends Component {
  constructor(props) {
     super(props);
+
     this.state = {
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
+      trucksArr: this.props.trucks
     }
 
     // binding this to event-handler functions
@@ -23,6 +25,13 @@ class MapContainer extends Component {
     });
   }
 
+  onInfoWindowClose(){
+    this.setState({
+      showingInfoWindow: false,
+      activeMarker: null
+    })
+  }
+
   onMapClicked(props) {
     if (this.state.showingInfoWindow) {
       this.setState({
@@ -32,25 +41,34 @@ class MapContainer extends Component {
     }
   }
 
-
-  fetchPlaces(mapProps, map) {
-    const {google} = mapProps;
-    const service = new google.maps.places.PlacesService(map);
-    // ...
+  componentDidMount(){
+     console.log(this.props.trucks);
   }
 
+// fetchPlaces(mapProps, map) {
+//   const google = mapProps;
+//   const service = new google.maps.places.PlacesService(map);
+//   // ...
+// };
+
+
   render() {
+    // console.log(this.state.trucksArr);
+
+
+    var truckComponents = this.props.trucks.map((truckData) => <Marker key={truckData.id}
+      name={truckData.name} position={{lat:truckData.coordinates.latitude, lng:truckData.coordinates.longitude }} />);
+
+
     const {props, state} = this,
           {mapStyles} = props;
 
-    const style = {
-      padding: 5,
-      width: '100%',
-      height: '100%'
-    };
+
+
 
     return (
      <Map google={this.props.google}
+     onReady={this.fetchPlaces}
       styles={mapStyles}
       initialCenter={{
             lat: 30.267153,
@@ -59,14 +77,11 @@ class MapContainer extends Component {
       zoom={14}
       className={'map'}
       onClick={this.onMapClicked}>
-
-        <Marker
+        {truckComponents}
+       {/* <Marker
           name={'Current location'}
           position={{lat:30.2706345638105, lng:-97.7415420642792}}
-          icon={{
-            url: "./images/truck.svg",
-          }}
-           />
+           />*/}
 
 
         {/*<InfoWindow onClose={this.onInfoWindowClose}>

@@ -5,14 +5,14 @@ import Nav from './Components/Nav';
 import DisplayContainerMobile from './Components/DisplayContainerMobile';
 import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
 import Profile from './Components/Profile';
+import MapContainer from './Components/MapContainer';
+
 
 class Nommad extends Component {
   constructor(props){
     super(props);
   }
 
-    //I'm sorry 
-  }
 
 
 
@@ -26,14 +26,9 @@ class Nommad extends Component {
           <button type="submit">Search</button>
         </div>
 
-        //<DisplayContainerDesktop trucks={this.state.isFetchingTrucks ? 'Loading food trucks...' : this.state.foodTruckData } />
-        <DisplayContainerDesktop trucks={this.state.trucksArr} />
-        <div className="mobileView">
-          <DisplayContainerMobile trucks={this.state.trucksArr} />
-        </div>
+       {/* <DisplayContainerMobile trucks={truckInfoArr} />*/}
+        <DisplayContainerDesktop trucks={truckInfoArr} />
 
-        <DisplayContainerMobile trucks={this.state.trucksArr} />
-        <DisplayContainerDesktop trucks={this.state.trucksArr} />
 
 
       </div>
