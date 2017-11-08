@@ -112,7 +112,8 @@ MapContainer.defaultProps ={
             {"featureType": 'water', "elementType": 'geometry', "stylers": [{"color": '#17263c'}]},
             {"featureType": 'water', "elementType": 'labels.text.fill', "stylers": [{"color": '#515c6d'}]},
             {"featureType": 'water', "elementType": 'labels.text.stroke', "stylers": [{"color": '#17263c'}]}]
-}
+};
+
 
 export default GoogleApiWrapper({
   apiKey: ("AIzaSyBHLett8djBo62dDXj0EjCimF8Rd6E8cxg")
