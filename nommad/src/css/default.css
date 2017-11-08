@@ -165,8 +165,14 @@ footer {
 
 img#yelp-logo{
   display: inline;
-  height: 7%;
-  width: 7%;
+  height: 5%;
+  width: 5%;
+}
+
+img#github-logo{
+  display: inline;
+  height: 3%;
+  width: 3%;
 }
 
 #clearfix:after {
