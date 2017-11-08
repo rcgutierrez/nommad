@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './css/default.css';
 import Nav from './Components/Nav';
-import DisplayContainerMobile from './Components/DisplayContainerMobile';
 import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
-import Profile from './Components/Profile';
-import MapContainer from './Components/MapContainer';
-//sophia delete this
+// import Profile from './Components/Profile';
+
 class Nommad extends Component {
   constructor(props){
     super(props);
@@ -38,27 +36,31 @@ class Nommad extends Component {
           });
         }
         getZipCode() {
-          // console.log(this.state.getRequestData, ' request data');
+          this.setState({
+            getRequestData: ''
+          });
           let truckInfoArr = [];
           let data = this.state.getRequestData;
           let zip = document.querySelector("input").value;
             console.log(zip, ' zip');
             data.forEach(obj => {
               // console.log(typeof obj.location.zip_code, ' objects')
-              if(obj.location.zip_code === zip || obj.distance <= 7500) {
+              if(obj.location.zip_code === zip || obj.distance <= 3500) {
                 console.log(`Data match`)
                 truckInfoArr.push(obj);
               }
             })
             console.log(truckInfoArr, ' data info')
-          return truckInfoArr;
+            this.setState({
+              getRequestData: truckInfoArr
+            });
         }
 
   render() {
     let truckInfo = this.state.getRequestData;
     let truckInfoArr = [];
     for (var i = 0; i < truckInfo.length; i++){
-      let truck = truckInfo[i];
+      // let truck = truckInfo[i];
       truckInfoArr.push(truckInfo[i]);
     }
     return (
@@ -71,10 +73,11 @@ class Nommad extends Component {
           </div>
         </div>
 
-       {/* <DisplayContainerMobile trucks={truckInfoArr} />*/}
-        <DisplayContainerDesktop trucks={truckInfoArr} />
+        <DisplayContainerDesktop className="site-info" trucks={truckInfoArr} />
 
-
+        <footer className="clearfix">
+          <p>Made with <span className="heart">♥︎</span> at General Assembly</p>
+        </footer>
       </div>
     );
   }

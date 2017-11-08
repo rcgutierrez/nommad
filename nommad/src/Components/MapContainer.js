@@ -57,42 +57,40 @@ class MapContainer extends Component {
 
 
     var truckComponents = this.props.trucks.map((truckData) => <Marker key={truckData.id}
-      name={truckData.name} position={{lat:truckData.coordinates.latitude, lng:truckData.coordinates.longitude }} />);
+      name={truckData.name} onClick={this.onMarkerClick} position={{lat:truckData.coordinates.latitude, lng:truckData.coordinates.longitude }} />);
 
 
-    const {props, state} = this,
+    // const {props, state} = this,
+    //       {mapStyles} = props;
+
+   const {props} = this,
           {mapStyles} = props;
-
-
 
 
     return (
      <Map google={this.props.google}
-     onReady={this.fetchPlaces}
-      styles={mapStyles}
-      initialCenter={{
-            lat: 30.267153,
-            lng: -97.743061
-          }}
-      zoom={14}
-      className={'map'}
-      onClick={this.onMapClicked}>
+        onClick={this.onMapClicked}
+        onReady={this.fetchPlaces}
+        styles={mapStyles}
+        initialCenter={{
+          lat: 30.267153,
+          lng: -97.743061
+        }}
+        zoom={14}
+        className={'map'}>
         {truckComponents }
-       {/* <Marker
-          name={'Current location'}
-          position={{lat:30.2706345638105, lng:-97.7415420642792}}
-           />*/}
 
-
-        {/*<InfoWindow onClose={this.onInfoWindowClose}>
+        <InfoWindow
+          marker={this.state.activeMarker}
+          visible={this.state.showingInfoWindow}>
             <div>
               <h1>{this.state.selectedPlace.name}</h1>
             </div>
-        </InfoWindow>*/}
+        </InfoWindow>
       </Map>
-    );
+    )
   }
-}
+};
 
 MapContainer.defaultProps ={
   mapStyles: [{"elementType": 'geometry', "stylers": [{"color": '#242f3e'}]}, {"elementType": 'labels.text.stroke', "stylers": [{"color": '#242f3e'}]},

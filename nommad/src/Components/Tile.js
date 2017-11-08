@@ -50,8 +50,8 @@ class Tile extends Component {
       <div className="tile" style={ sectionStyle } onClick={this._showProfile}>
          <h4 style={{display: this.state.isProfileShowing ? 'none' : 'block'}}>{this.state.truck.name}</h4>
         <div className="iconContainer" onClick={this._addNom}>
-          <img src={require('../images/nom.svg')} className="nom" />
-          <img src={require('../images/bubble.svg')} className="bubble" />
+          <img src={require('../images/nom.svg')} className="nom" alt="" />
+          <img src={require('../images/bubble.svg')} className="bubble" alt=""/>
         </div>
         <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none', height: '50vh'}}>
           <Profile truck={this.state.truck} />
