@@ -57,7 +57,7 @@ class Nommad extends Component {
           <button type="submit">Search</button>
         </div>
 
-        <DisplayContainerMobile trucks={truckInfoArr} />
+       {/* <DisplayContainerMobile trucks={truckInfoArr} />*/}
         <DisplayContainerDesktop trucks={truckInfoArr} />
 
 

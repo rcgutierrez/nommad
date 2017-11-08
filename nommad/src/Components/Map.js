@@ -4,11 +4,12 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 class MapContainer extends Component {
  constructor(props) {
     super(props);
+    console.log(this.props);
     this.state = {
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
-      trucks: this.props.trucks
+      trucksArr: this.props.trucks
     }
 
     // binding this to event-handler functions
@@ -48,16 +49,14 @@ class MapContainer extends Component {
 
 
   render() {
-    let resultsArr = (
-      <Marker
-          name={'Current location'}
-          position={{lat:30.2706345638105, lng:-97.7415420642792}}
-           />
-           );
-    console.log(this.state.trucks);
-    resultsArr = this.state.trucks.map(function(truck, index) {return (<Marker key={index} name={truck.name} position={{lat:truck.coordinates.latitude, lng:truck.coordinates.longitude }} />) });
+    console.log(this.state.trucksArr);
+    var truckComponents = this.state.trucksArr.map((truckData) => <Marker key={truckData.id}
+      name={truckData.name} position={{lat:truckData.coordinates.latitude, lng:truckData.coordinates.longitude }} />);
+
+
     const {props, state} = this,
           {mapStyles} = props;
+
 
     return (
      <Map google={this.props.google}
@@ -70,9 +69,8 @@ class MapContainer extends Component {
       zoom={14}
       className={'map'}
       onClick={this.onMapClicked}>
-
-        {resultsArr}
-        {/*<Marker
+        {truckComponents}
+       {/* <Marker
           name={'Current location'}
           position={{lat:30.2706345638105, lng:-97.7415420642792}}
            />*/}
