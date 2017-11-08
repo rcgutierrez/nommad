@@ -16,7 +16,7 @@ class Profile extends Component {
 
 
   render() {
-    let rating = Math.floor(this.state.truck.rating);
+    let rating = Math.round(this.state.truck.rating);
     let stars;
     switch(rating) {
     case 1:
