@@ -60,10 +60,11 @@ class MapContainer extends Component {
       name={truckData.name} onClick={this.onMarkerClick} position={{lat:truckData.coordinates.latitude, lng:truckData.coordinates.longitude }} />);
 
 
-    const {props, state} = this,
+    // const {props, state} = this,
+    //       {mapStyles} = props;
+
+   const {props} = this,
           {mapStyles} = props;
-
-
 
 
     return (
@@ -78,7 +79,6 @@ class MapContainer extends Component {
         zoom={14}
         className={'map'}>
         {truckComponents }
-
 
         <InfoWindow
           marker={this.state.activeMarker}

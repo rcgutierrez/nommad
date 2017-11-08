@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Tile from './Tile';
 import MapContainer from './MapContainer';
-import Profile from './Profile';
+// import Profile from './Profile';
 
 class DisplayContainerDesktop extends Component {
   constructor(props){
@@ -14,7 +14,7 @@ class DisplayContainerDesktop extends Component {
   render() {
 
 
-    var trucks;
+    // var trucks;
 
     //if(this.state.trucksArr)
       //trucks = JSON.parse(JSON.stringify(this.props.trucks));

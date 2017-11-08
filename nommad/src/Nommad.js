@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './css/default.css';
 import Nav from './Components/Nav';
-import DisplayContainerMobile from './Components/DisplayContainerMobile';
 import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
-import Profile from './Components/Profile';
-import MapContainer from './Components/MapContainer';
-//sophia delete this
+// import Profile from './Components/Profile';
+
 class Nommad extends Component {
   constructor(props){
     super(props);
@@ -62,7 +60,7 @@ class Nommad extends Component {
     let truckInfo = this.state.getRequestData;
     let truckInfoArr = [];
     for (var i = 0; i < truckInfo.length; i++){
-      let truck = truckInfo[i];
+      // let truck = truckInfo[i];
       truckInfoArr.push(truckInfo[i]);
     }
     return (
@@ -75,9 +73,11 @@ class Nommad extends Component {
           </div>
         </div>
 
-        <DisplayContainerDesktop trucks={truckInfoArr} />
+        <DisplayContainerDesktop className="site-info" trucks={truckInfoArr} />
 
-
+        <footer className="clearfix">
+          <p>Made with <span className="heart">♥︎</span> at General Assembly</p>
+        </footer>
       </div>
     );
   }
