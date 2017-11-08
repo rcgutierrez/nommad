@@ -5,16 +5,42 @@ import Nav from './Components/Nav';
 import DisplayContainerMobile from './Components/DisplayContainerMobile';
 import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
 import Profile from './Components/Profile';
+import MapContainer from './Components/MapContainer';
 
 class Nommad extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      isFetchingTrucks: false,
+      getRequestData: ''
+    }
+    this.getFoodTruck = this.getFoodTruck.bind(this);
   }
 
-    //I'm sorry
-  }
+    componentDidMount() {
+      this.getFoodTruck();
+    }
+
+    getFoodTruck() {
+      this.setState({
+        isFetchingTrucks: true
+      })
 
 
+
+    const yelpApi = 'https://nommad-backend.herokuapp.com/api';
+    axios.get(yelpApi)
+         .then((response) => {
+           console.log(response);
+           let trucksArr = response.data.businesses;
+           this.setState({
+             getRequestData: trucksArr
+           })
+           //Re render it in UI
+         }).catch(error => {
+           console.log(`Error, ${error}`);
+         });
+    }
 
   render() {
     let truckInfo = this.state.getRequestData;
@@ -23,7 +49,6 @@ class Nommad extends Component {
       let truck = truckInfo[i];
       truckInfoArr.push(truckInfo[i]);
     }
-    console.log(truckInfoArr);
     return (
       <div className="App">
         <Nav />
@@ -32,14 +57,8 @@ class Nommad extends Component {
           <button type="submit">Search</button>
         </div>
 
-        //<DisplayContainerDesktop trucks={this.state.isFetchingTrucks ? 'Loading food trucks...' : this.state.foodTruckData } />
-        <DisplayContainerDesktop trucks={this.state.trucksArr} />
-        <div className="mobileView">
-          <DisplayContainerMobile trucks={this.state.trucksArr} />
-        </div>
-
-        <DisplayContainerMobile trucks={this.state.trucksArr} />
-        <DisplayContainerDesktop trucks={this.state.trucksArr} />
+       {/* <DisplayContainerMobile trucks={truckInfoArr} />*/}
+        <DisplayContainerDesktop trucks={truckInfoArr} />
 
 
       </div>

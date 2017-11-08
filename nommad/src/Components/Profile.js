@@ -12,7 +12,7 @@ class Profile extends Component {
 
 
   render() {
-    console.log(this.state.truck);
+
     return (
       <div className="profile">
 

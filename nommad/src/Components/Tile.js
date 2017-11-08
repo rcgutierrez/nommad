@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Profile from './Profile';
+import axios from 'axios';
 
 class Tile extends Component {
   constructor(props){
@@ -15,10 +16,12 @@ class Tile extends Component {
     this._addNom = this._addNom.bind(this);
   }
 
+
   _addNom() {
     this.setState({
-      nomCount: this.nomCount++
+      nomCount: this.state.nomCount+=1
     })
+    console.log(this.state.nomCount);
   }
 
   _showProfile() {
@@ -48,7 +51,7 @@ class Tile extends Component {
          <h4 style={{display: this.state.isProfileShowing ? 'none' : 'block'}}>{this.state.truck.name}</h4>
         <div className="iconContainer" onClick={this._addNom}>
           <img src={require('../images/nom.svg')} className="nom" />
-          <img src={require('../images/bubble.svg')} className="bubble" ></img>
+          <img src={require('../images/bubble.svg')} className="bubble" />
         </div>
         <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none', height: '50vh'}}>
           <Profile truck={this.state.truck} />
