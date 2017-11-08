@@ -5,10 +5,19 @@ html, body{
 }
 .App{
 }
+.nav-bar{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 .Nav{
- margin: 5px;
- flex: 1;
+ flex:30%;
  justify-content: space-between;
+ background-color: black;
+ padding: 25px;
+}
+.Nav img{
+  padding: 10px;
 }
 .menu{
   width: 18px;
@@ -34,8 +43,8 @@ h3{
 }
 input[type=text]{
     width:50%;
-    margin: 10px;
-    padding: 5px 10px;
+    margin: 10px 40px 10px 80px;
+    padding: 5px 70px 5px 5px;
     display: inline-block;
     box-sizing: border-box;
     font-family:'Nunito', sans-serif;
@@ -48,7 +57,7 @@ button{
     font-size: 14px;
     font-weight: bold;
     color:white;
-    padding:10px 20px;
+    padding:10px 30px;
     border: 2px solid #B0E0E6;
     background: #75ead0;
     border:0 none;
@@ -58,8 +67,10 @@ button{
     box-sizing: border-box;
 }
 .search{
+  flex:70%;
   background-color: black;
   justify-content: space-between;
+  padding: 15px;
 }
 .displayContainerMobile {
   display: none;
@@ -68,6 +79,7 @@ button{
    padding: 5px;
    display: flex;
    width: 100%;
+   background-color: #000000;
 }
 .resultTiles{
   flex: 50%;
@@ -80,7 +92,7 @@ button{
 }
 .resultMap{
   flex: 50%;
-  padding: 15px;
+  padding: 5px;
   position: relative;
   box-sizing: border-box;
 }
