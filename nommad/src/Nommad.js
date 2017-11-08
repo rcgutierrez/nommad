@@ -75,7 +75,6 @@ class Nommad extends Component {
           </div>
         </div>
 
-       {/* <DisplayContainerMobile trucks={truckInfoArr} />*/}
         <DisplayContainerDesktop trucks={truckInfoArr} />
 
 
