@@ -5,14 +5,38 @@ class Profile extends Component {
     super(props);
 
     this.state = {
-      truck: this.props.truck
+      truck: this.props.truck,
+      rating: []
     }
   }
 
+  componentDidMount(){
+
+  }
 
 
   render() {
-
+    let rating = Math.floor(this.state.truck.rating);
+    let stars;
+    switch(rating) {
+    case 1:
+        stars = <img src={'/yelp_stars/web_and_ios/small/small_1.png'} />
+        break;
+    case 2:
+        stars = <img src={'/yelp_stars/web_and_ios/small/small_2.png'} />
+        break;
+    case 3:
+        stars = <img src={'/yelp_stars/web_and_ios/small/small_3.png'} />
+        break;
+    case 4:
+        stars = <img src={'/yelp_stars/web_and_ios/small/small_4.png'} />
+        break;
+    case 5:
+        stars = <img src={'/yelp_stars/web_and_ios/small/small_5.png'} />
+        break;
+    default:
+      stars = '¯\\_(ツ)_/¯'
+}
     return (
       <div className="profile">
 
@@ -20,7 +44,7 @@ class Profile extends Component {
 
         <section className="main-info">
             <h2>{this.state.truck.name}</h2>
-            <h5>Price:{this.state.truck.price}</h5>
+            <h5>Price: {this.state.truck.price ? this.state.truck.price : '¯\\_(ツ)_/¯' }</h5>
             <p>{this.state.truck.isClosed ? 'Closed' : 'Open'}</p>
         </section>
 
@@ -31,7 +55,8 @@ class Profile extends Component {
 
 
         <section className="ratings">
-          <p>Yelp Rating: {this.state.truck.rating}</p>
+          <p>Yelp Rating:</p>
+          <p>{stars}</p>
         </section>
 
         {/*<section className="userPics">
