@@ -46,6 +46,12 @@ html, body{
 .profile{
   background:rgba(255,255,255, 0.7);
   padding: 15px;
+  width: 55%;
+  max-width: 90%
+}
+
+.ratings p img {
+  max-width: 75%
 }
 
 h4{
