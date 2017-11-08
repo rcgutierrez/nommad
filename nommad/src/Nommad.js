@@ -38,20 +38,24 @@ class Nommad extends Component {
           });
         }
         getZipCode() {
-          // console.log(this.state.getRequestData, ' request data');
+          this.setState({
+            getRequestData: ''
+          });
           let truckInfoArr = [];
           let data = this.state.getRequestData;
           let zip = document.querySelector("input").value;
             console.log(zip, ' zip');
             data.forEach(obj => {
               // console.log(typeof obj.location.zip_code, ' objects')
-              if(obj.location.zip_code === zip) {
+              if(obj.location.zip_code === zip || obj.distance <= 3500) {
                 console.log(`Data match`)
                 truckInfoArr.push(obj);
               }
             })
             console.log(truckInfoArr, ' data info')
-          return truckInfoArr;
+            this.setState({
+              getRequestData: truckInfoArr
+            });
         }
 
   render() {
@@ -67,7 +71,7 @@ class Nommad extends Component {
           <Nav />
           <div className="search">
             <input type="text" placeholder="Search by Zip Code"></input>
-            <button type="submit">Search</button>
+            <button type="submit" onClick={this.getZipCode}>Search</button>
           </div>
         </div>
 

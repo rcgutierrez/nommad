@@ -25,7 +25,8 @@ class Profile extends Component {
         </section>
 
         <section className="bio">
-          <h5>{this.state.truck.location.address1}</h5>
+          <p><strong>{this.state.truck.location.address1}</strong></p>
+          <p><strong>{this.state.truck.location.city}, {this.state.truck.location.state} {this.state.truck.location.zip_code}</strong></p>
         </section>
 
 
