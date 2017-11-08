@@ -158,6 +158,7 @@ footer {
 }
 
 img#yelp-logo{
+  display: inline;
   height: 7%;
   width: 7%;
 }

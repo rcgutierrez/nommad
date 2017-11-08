@@ -81,8 +81,8 @@ class Nommad extends Component {
 
 
         <footer className="clearfix">
-          <p>Made with <span className="heart">♥︎</span> at General Assembly</p>
-          <img src={require('./images/yelp-logo.png')} id="yelp-logo" alt="yelp logo" />
+          <p>Made with <span className="heart">♥︎</span> at General Assembly by Karla, Natasha, Raul, and Sofia.</p>
+          <p>Made using Yelp Fusion API.</p> <img src={require('./images/yelp-logo.png')} id="yelp-logo" alt="yelp logo" />
         </footer>
       </div>
     );
