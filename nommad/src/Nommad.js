@@ -5,7 +5,7 @@ import Nav from './Components/Nav';
 import DisplayContainerMobile from './Components/DisplayContainerMobile';
 import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
 import Profile from './Components/Profile';
-import Map from './Components/Map';
+import MapContainer from './Components/MapContainer';
 
 class Nommad extends Component {
   constructor(props){

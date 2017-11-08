@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Tile from './Tile';
-import MapContainer from './Map';
+import MapContainer from './MapContainer';
 import Profile from './Profile';
 
 class DisplayContainerDesktop extends Component {
@@ -13,9 +13,16 @@ class DisplayContainerDesktop extends Component {
   }
   render() {
 
+
+    var trucks;
+
+    //if(this.state.trucksArr)
+      //trucks = JSON.parse(JSON.stringify(this.props.trucks));
+
     var truckComponents = this.props.trucks.map((truckData)=>
       <Tile key={truckData.id} truck={truckData}/>
     );
+
 
     return (
       <div className="displayContainerDesktop">
@@ -23,7 +30,7 @@ class DisplayContainerDesktop extends Component {
           { truckComponents }
         </div>
         <div className="resultMap">
-          <MapContainer trucks={this.state.trucksArr} />
+          <MapContainer trucks={this.props.trucks} />
         </div>
       </div>
     );

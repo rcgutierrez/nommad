@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Tile from './Tile';
-import MapContainer from './Map';
+import MapContainer from './MapContainer';
 import Profile from './Profile';
 
 

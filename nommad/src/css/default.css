@@ -113,5 +113,4 @@ button{
 @media screen and (max-width: 800px) {
   .displayContainerDesktop {
     display: none; }
-  .displayContainerMobile {
-    display: block; } }*/
+  }

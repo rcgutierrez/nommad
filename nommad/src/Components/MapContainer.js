@@ -4,7 +4,7 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 class MapContainer extends Component {
  constructor(props) {
     super(props);
-    console.log(this.props);
+
     this.state = {
       showingInfoWindow: false,
       activeMarker: {},
@@ -41,6 +41,10 @@ class MapContainer extends Component {
     }
   }
 
+  componentDidMount(){
+     console.log(this.props.trucks);
+  }
+
 // fetchPlaces(mapProps, map) {
 //   const google = mapProps;
 //   const service = new google.maps.places.PlacesService(map);
@@ -49,13 +53,17 @@ class MapContainer extends Component {
 
 
   render() {
-    console.log(this.state.trucksArr);
-    var truckComponents = this.state.trucksArr.map((truckData) => <Marker key={truckData.id}
+    // console.log(this.state.trucksArr);
+
+
+    var truckComponents = this.props.trucks.map((truckData) => <Marker key={truckData.id}
       name={truckData.name} position={{lat:truckData.coordinates.latitude, lng:truckData.coordinates.longitude }} />);
 
 
     const {props, state} = this,
           {mapStyles} = props;
+
+
 
 
     return (
