@@ -38,7 +38,7 @@ class Tile extends Component {
 
   render() {
     let sectionStyle = {
-        width: "275px !important",
+        width: "275px",
         minHeight: "200px",
         maxHeight: "200px",
         backgroundImage: `url(${this.state.truck.image_url})`,
