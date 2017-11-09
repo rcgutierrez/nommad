@@ -150,14 +150,14 @@ button{
   height: 26px;
   object-fit: contain;
   position: relative;
+  z-index: -1;
 }
 
 .score {
   display: inline-block;
-  position: sticky;
-  margin-top: 13px;
-  margin-bottom: -40px;
-  margin-left: -24px;
+  position: relative;
+  top: -12px;
+  right: 22px;
 }
 
 .tile {
