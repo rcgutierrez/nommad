@@ -24,7 +24,7 @@ class Nommad extends Component {
           const yelpApi = 'https://nommad-backend.herokuapp.com/api/' + zip;
           axios.get(yelpApi)
              .then((response) => {
-               console.log(response);
+               console.log(`response gathered `, response.data.businesses.length);
                let trucksArr = response.data.businesses;
                this.setState({
                  getRequestData: trucksArr
@@ -54,8 +54,9 @@ class Nommad extends Component {
             })
             console.log(truckInfoArr, ' data info')
             this.setState({
-              getRequestData: truckInfoArr
+              getRequestData: truckInfoArr,
             });
+          let message = document.querySelector(".nav-bar").append(`Displaying food trucks in area code ${zip}`)
         }
 
   render() {
@@ -64,16 +65,21 @@ class Nommad extends Component {
     for (var i = 0; i < truckInfo.length; i++){
       truckInfoArr.push(truckInfo[i]);
     }
+
+
     return (
       <div className="App">
         <div className="nav-bar">
           <Nav />
           <div className="search">
             <form onSubmit={this.getZipCode}>
-              <input type="text" placeholder=" Search by Zip Code or City"></input>
+              <input type="text" placeholder="Search by Zip Code or City"></input>
               <button type="submit" onClick={this.getZipCode}>Search</button>
             </form>
           </div>
+          <br />
+          <br />
+
         </div>
 
         <DisplayContainerDesktop trucks={truckInfoArr} />
