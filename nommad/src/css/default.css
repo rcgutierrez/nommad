@@ -1,39 +1,42 @@
-html, body{
+html, body {
   margin: 0 auto;
   background-color: #E10A53;
   max-width: 1500px;
 }
 
-.App{
+.App {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
 }
 
-.nav-bar{
+.nav-bar {
   display:flex;
   flex-direction: row;
   max-height: 100px;
+  text-align: left;
+  font-size: 14px;
+  color: #fff;
 }
 
-.Nav{
- flex:30%;
- background-color: #E10A53;
- padding: 25px;
+.Nav {
+  flex:30%;
+  background-color: #E10A53;
+  padding: 25px;
 }
 
-.search{
+.search {
   flex:70%;
   background-color: #E10A53;
   justify-content: space-between;
   padding: 15px;
 }
 
-.Nav img{
+.Nav img {
   max-height: 50px;
 }
 
-.nom-icon{
+.nom-icon {
   max-width: 50px;
   object-fit: contain;
 }
@@ -44,11 +47,12 @@ html, body{
   object-fit: contain;
 }
 
-.profile{
+.profile {
   position: absolute;
   background: linear-gradient(to right, rgba(0,0,0, 0.7), rgba(0,0,0, 0.01));
   padding: 5px;
   width: 91%;
+  height: 100%;
   color: white;
 }
 
@@ -57,14 +61,14 @@ html, body{
 }
 
 h4{
-  background: linear-gradient(to right, rgba(0,0,0, 0.7), rgba(0,0,0, 0.001));
+  background: linear-gradient(to right bottom, rgba(0,0,0, 0.7), rgba(0,0,0, 0.0001));
   width: auto;
   margin: 0 auto;
   padding: 10px;
   color: white;
 }
 
-h3{
+h3 {
   width: 69px;
   height: 19px;
   font-family:'Nunito', sans-serif;
@@ -74,31 +78,31 @@ h3{
   color: #07362b;
 }
 
-input[type=text]{
-    width:50%;
-/*    margin: 10px 40px 10px 80px;
-    padding: 5px 70px 5px 5px;*/
-    display: inline-block;
-    box-sizing: border-box;
-    font-family:'Nunito', sans-serif;
-    font-size: 16px;
-    text-align: left;
-    color: #E10A53;
+input[type=text] {
+  width:50%;
+/*margin: 10px 40px 10px 80px;
+  padding: 5px 70px 5px 5px;*/
+  display: inline-block;
+  box-sizing: border-box;
+  font-family:'Nunito', sans-serif;
+  font-size: 16px;
+  text-align: left;
+  color: #E10A53;
 }
 
-button{
-    margin: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    padding:10px 30px;
-    border: 2px solid #B0E0E6;
-    background: #75ead0;
-    border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    box-sizing: border-box;
+button {
+  margin: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  padding:10px 30px;
+  border: 2px solid #B0E0E6;
+  background: #75ead0;
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .displayContainerDesktop {
@@ -108,7 +112,7 @@ button{
   background-color: #E10A53;
 }
 
-.resultTiles{
+.resultTiles {
   flex: 50%;
   position: relative;
   height: 725px;
@@ -119,7 +123,7 @@ button{
   flex-wrap: wrap;
 }
 
-.resultMap{
+.resultMap {
   flex: 50%;
   position: relative;
   box-sizing: border-box;
@@ -158,6 +162,7 @@ button{
   position: relative;
   top: -12px;
   right: 22px;
+  color: white;
 }
 
 .tile {
@@ -165,7 +170,7 @@ button{
   flex-grow: 0;
   flex-basis: 25%;
   min-width: 200px !important;
-  margin: 10px;
+  margin: 0 10px 20px 10px;
   flex: 1;
   overflow-y: scroll;
   flex-direction: column;
@@ -186,7 +191,7 @@ button{
   margin-left: 10px;
 }
 
-p{
+p {
   margin: 0;
 }
 
@@ -196,11 +201,11 @@ a {
 }
 
 footer {
-    font-family:'Nunito', sans-serif;
-    background-color: #E10A53;
-    text-align: center;
-    color: white;
-    font-size: 1rem;
+  font-family:'Nunito', sans-serif;
+  background-color: #E10A53;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
 }
 
 .footerLink{
@@ -213,7 +218,7 @@ img#yelp-logo{
   width: 5%;
 }
 
-img#github-logo{
+img #github-logo{
   display: inline;
   height: 3%;
   width: 3%;
@@ -246,7 +251,7 @@ img#github-logo{
     width: 50%;
   }
 
-  .displayContainerDesktop{
+  .displayContainerDesktop {
     flex-direction: column;
     flex-grow: 100;
   }
@@ -254,7 +259,7 @@ img#github-logo{
 
 
 @media only screen and (max-width: 550px) {
-  .displayContainerDesktop{
+  .displayContainerDesktop {
     flex-direction: column;
   }
 
