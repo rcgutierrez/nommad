@@ -58,7 +58,7 @@ html, body{
 }
 
 h4{
-  background: linear-gradient(to right, rgba(0,0,0, 0.7), rgba(0,0,0, 0.001));
+  background: linear-gradient(to right bottom, rgba(0,0,0, 0.7), rgba(0,0,0, 0.0001));
   width: auto;
   margin: 0 auto;
   padding: 10px;
@@ -167,7 +167,7 @@ button{
   flex-grow: 0;
   flex-basis: 25%;
   min-width: 200px !important;
-  margin: 10px;
+  margin: 0 10px 20px 10px;
   flex: 1;
   overflow-y: scroll;
   flex-direction: column;
