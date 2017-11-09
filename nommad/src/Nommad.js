@@ -75,7 +75,7 @@ class Nommad extends Component {
             </form>
           </div>
         </div>
-
+        
         <DisplayContainerDesktop trucks={truckInfoArr} />
 
 

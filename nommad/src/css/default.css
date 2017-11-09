@@ -162,8 +162,19 @@ button{
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  opacity: 0.9;
   background-color: #ffffff;
+  z-index: 10;
+}
+
+.message{
+  color: white;
+  font-size: 125%;
+  width: 200px;
+  overflow-wrap: break-word;
+  text-align: center;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 p{
@@ -209,6 +220,11 @@ img#github-logo{
 }
 
 @media only screen and (max-width: 950px) {
+
+  .map {
+    visibility: hidden;
+  }
+
   .nommad-logo-lrg, .nom-icon{
     padding-top: 20px;
     height: 50%;
@@ -220,6 +236,7 @@ img#github-logo{
     flex-grow: 100;
   }
 }
+
 
 @media only screen and (max-width: 550px) {
   .displayContainerDesktop{

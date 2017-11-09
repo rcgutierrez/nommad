@@ -28,6 +28,7 @@ class DisplayContainerDesktop extends Component {
     return (
       <div className="displayContainerDesktop">
         <div className="resultTiles" >
+        <div className="message"><p>There are no food trucks near that location.</p><img src="https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/loudly-crying-face_1f62d.png"/></div>
           { truckComponents }
         </div>
         <div className="resultMap">
