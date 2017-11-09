@@ -44,14 +44,22 @@ html, body{
 }
 
 .profile{
-  background:rgba(255,255,255, 0.7);
+  background: linear-gradient(left, rgba(0,0,0, 0.7), rgba(0,0,0, 0.01));
   padding: 15px;
+  width: 100%;
+  color: white;
+}
+
+.ratings p img {
+  max-width: 75%
 }
 
 h4{
-  background:rgba(255,255,255, 0.7);
+  background: linear-gradient(top, rgba(0,0,0, 0.7), rgba(0,0,0, 0.001));
+  width: 100%;
   margin: 0 auto;
   padding: 15px;
+  color: white;
 }
 
 h3{
@@ -105,12 +113,14 @@ button{
   display: flex;
   flex-direction: column;
   overflow-y: scroll;
+  padding: 0 5px;
 }
 
 .resultMap{
   flex: 50%;
   position: relative;
   box-sizing: border-box;
+  padding: 0 5px;
 }
 
 .map {
@@ -147,6 +157,11 @@ button{
 
 p{
   margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 footer {

@@ -53,7 +53,6 @@ class MapContainer extends Component {
 
 
   render() {
-    // console.log(this.state.trucksArr);
 
 
     var truckComponents = this.props.trucks.map((truckData) => <Marker key={truckData.id}

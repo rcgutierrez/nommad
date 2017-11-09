@@ -43,20 +43,21 @@ class Tile extends Component {
         backgroundImage: `url(${this.state.truck.image_url})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        textShadow: "0px 0px 2px white"
       };
 
     return (
-      <div className="tile" style={ sectionStyle } onClick={this._showProfile}>
-         <h4 style={{display: this.state.isProfileShowing ? 'none' : 'block'}}>{this.state.truck.name}</h4>
-        <div className="iconContainer" onClick={this._addNom}>
-          <img src={require('../images/nom.svg')} className="nom" alt="" />
-          <img src={require('../images/bubble.svg')} className="bubble" alt=""/>
+
+        <div className="tile" style={ sectionStyle } onClick={this._showProfile}>
+          <div className="iconContainer" onClick={this._addNom}>
+            <img src={require('../images/nom.svg')} className="nom" alt="" />
+            <img src={require('../images/bubble.svg')} className="bubble" alt=""/>
+          </div>
+          <h4 style={{display: this.state.isProfileShowing ? 'none' : 'block'}}>{this.state.truck.name}</h4>
+
+          <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none', height: '50vh'}}>
+            <Profile truck={this.state.truck} />
+          </div>
         </div>
-        <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none', height: '50vh'}}>
-          <Profile truck={this.state.truck} />
-        </div>
-      </div>
     );
   }
 }
