@@ -9,9 +9,35 @@ class DisplayContainerDesktop extends Component {
     super(props);
     this.state = {
       showingTiles: true,
-      trucksArr: this.props.trucks
+      trucksArr: this.props.trucks,
+      message: ''
     }
   }
+
+  componentDidMount(){
+    this.getMsg();
+  }
+
+  getMsg(){
+    setTimeout(() => {
+      this.setState({
+        message: ''
+      })
+    }, 1000);
+    setTimeout(() => {
+      this.setState({
+        message: <div className="message"><p>There are no food trucks near that location.</p><img alt="sobbing emoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/loudly-crying-face_1f62d.png"/></div>
+      })
+    }, 2500);
+  }
+
+  onSearch(){
+    this.setState({
+      message: ''
+    })
+    this.getMsg();
+  }
+
   render() {
 
     var trucks;
@@ -24,11 +50,10 @@ class DisplayContainerDesktop extends Component {
       <Tile key={truckData.id} truck={truckData}/>
     );
 
-
     return (
       <div className="displayContainerDesktop">
         <div className="resultTiles" >
-        <div className="message"><p>There are no food trucks near that location.</p><img alt="sobbing emoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/loudly-crying-face_1f62d.png"/></div>
+          { this.state.message }
           { truckComponents }
         </div>
         <div className="resultMap">

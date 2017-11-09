@@ -13,7 +13,7 @@ class Nommad extends Component {
     }
     this.getFoodTruck = this.getFoodTruck.bind(this);
     this.getZipCode = this.getZipCode.bind(this);
-      }
+  }
         componentDidMount() {
           this.getFoodTruck('78701');
         }
@@ -71,12 +71,12 @@ class Nommad extends Component {
           <div className="search">
             <form onSubmit={this.getZipCode}>
               <input type="text" placeholder=" Search by Zip Code or City"></input>
-              <button type="submit" onClick={this.getZipCode}>Search</button>
+              <button type="submit" onClick={() => this.refs.child.onSearch()}>Search</button>
             </form>
           </div>
         </div>
-        
-        <DisplayContainerDesktop trucks={truckInfoArr} />
+
+        <DisplayContainerDesktop trucks={truckInfoArr} ref="child"/>
 
 
         <footer className="clearfix">
