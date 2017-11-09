@@ -3,6 +3,7 @@ import Tile from './Tile';
 import MapContainer from './MapContainer';
 // import Profile from './Profile';
 
+
 class DisplayContainerDesktop extends Component {
   constructor(props){
     super(props);
@@ -13,11 +14,11 @@ class DisplayContainerDesktop extends Component {
   }
   render() {
 
+    var trucks;
 
-    // var trucks;
-
-    //if(this.state.trucksArr)
-      //trucks = JSON.parse(JSON.stringify(this.props.trucks));
+    if(this.state.trucksArr)
+      trucks = JSON.parse(JSON.stringify(this.props.trucks));
+    console.log(trucks[0]);
 
     var truckComponents = this.props.trucks.map((truckData)=>
       <Tile key={truckData.id} truck={truckData}/>
@@ -26,7 +27,7 @@ class DisplayContainerDesktop extends Component {
 
     return (
       <div className="displayContainerDesktop">
-        <div className="resultTiles">
+        <div className="resultTiles" >
           { truckComponents }
         </div>
         <div className="resultMap">
