@@ -54,9 +54,9 @@ class MapContainer extends Component {
 
   render() {
 
-
+    console.log(this.props.trucks);
     var truckComponents = this.props.trucks.map((truckData) => <Marker key={truckData.id}
-      name={truckData.name} onClick={this.onMarkerClick} position={{lat:truckData.coordinates.latitude, lng:truckData.coordinates.longitude }}  icon={{url: require('../images/truck.svg')}} />);
+      name={truckData.name} info={this.props.trucks.name} onClick={this.onMarkerClick} position={{lat:truckData.coordinates.latitude, lng:truckData.coordinates.longitude }}  icon={{url: require('../images/truck.svg')}} />);
 
 
     // const {props, state} = this,
@@ -84,6 +84,7 @@ class MapContainer extends Component {
           visible={this.state.showingInfoWindow}>
             <div>
               <h1>{this.state.selectedPlace.name}</h1>
+              <p>{this.state.selectedPlace.info}</p>
             </div>
         </InfoWindow>
       </Map>
