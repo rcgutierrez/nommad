@@ -1,7 +1,7 @@
 html, body{
   margin: 0 auto;
   background-color: #E10A53;
-  max-width: 1000px;
+  max-width: 1500px;
 }
 
 .App{
@@ -102,20 +102,20 @@ button{
 
 .displayContainerDesktop {
   flex: 1;
-   padding: 5px;
-   display: flex;
-   background-color: #E10A53;
+  padding: 5px;
+  display: flex;
+  background-color: #E10A53;
 }
 
 .resultTiles{
   flex: 50%;
   position: relative;
   height: 725px;
+  overflow: scroll;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 0 5px;
   flex-wrap: wrap;
-  flex-shrink: 2;
 }
 
 .resultMap{
@@ -151,10 +151,15 @@ button{
 }
 
 .tile {
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 25%;
+  min-width: 200px !important;
   margin: 10px;
   flex: 1;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   opacity: 0.9;
   background-color: #ffffff;
 }
@@ -204,9 +209,18 @@ img#github-logo{
     height: 50%;
     width: 50%;
   }
+
+  .displayContainerDesktop{
+    flex-direction: column;
+    flex-grow: 100;
+  }
 }
 
 @media only screen and (max-width: 550px) {
+  .displayContainerDesktop{
+    flex-direction: column;
+  }
+
   .search{
     margin-top: 5px;
     display: flex;
