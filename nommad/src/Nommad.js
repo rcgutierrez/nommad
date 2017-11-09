@@ -52,6 +52,7 @@ class Nommad extends Component {
                 truckInfoArr.push(obj);
               }
             })
+
             console.log(truckInfoArr, ' data info')
             this.setState({
               getRequestData: truckInfoArr
@@ -64,6 +65,7 @@ class Nommad extends Component {
     for (var i = 0; i < truckInfo.length; i++){
       truckInfoArr.push(truckInfo[i]);
     }
+
     return (
       <div className="App">
         <div className="nav-bar">
