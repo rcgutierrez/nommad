@@ -81,6 +81,7 @@ class Nommad extends Component {
 
         <footer className="clearfix">
           <p>Made with <span className="heart">♥︎</span> at General Assembly by Karla, Natasha, Raul, and Sofia with Yelp Fusion API.</p>
+          <p>Nommad logo: <a className="footerLink" href="https://thenounproject.com/term/eat/880686/">"Eat"</a> by Llisole, from <a className="footerLink" href="http://thenounproject.com/">the Noun Project</a>.</p>
           <div>
             <img src={require('./images/yelp-logo.png')} id="yelp-logo" alt="yelp logo" />
             <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_gray-128.png" id="github-logo" alt="github logo" />

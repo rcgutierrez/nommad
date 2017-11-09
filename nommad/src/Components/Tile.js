@@ -55,7 +55,7 @@ class Tile extends Component {
             <img src={require('../images/nom.svg')} className="nom" alt="" />
             <img src={require('../images/bubble.svg')} className="bubble" alt=""/>
           </div>
-          <h4 style={{display: this.state.isProfileShowing ? 'none' : 'block'}}>{this.state.truck.name}</h4>
+          <h4 style={{display: this.state.isProfileShowing ? 'none' : 'block'}}>{this.state.truck.name} + </h4>
 
           <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none'}}>
             <Profile truck={this.state.truck} />
