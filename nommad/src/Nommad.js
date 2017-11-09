@@ -4,6 +4,7 @@ import './css/default.css';
 import Nav from './Components/Nav';
 import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
 
+
 class Nommad extends Component {
   constructor(props){
     super(props);
@@ -13,7 +14,7 @@ class Nommad extends Component {
     }
     this.getFoodTruck = this.getFoodTruck.bind(this);
     this.getZipCode = this.getZipCode.bind(this);
-      }
+  }
         componentDidMount() {
           this.getFoodTruck('78701');
         }

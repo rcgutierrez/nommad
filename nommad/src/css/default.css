@@ -49,6 +49,7 @@ html, body{
   background: linear-gradient(to right, rgba(0,0,0, 0.7), rgba(0,0,0, 0.01));
   padding: 5px;
   width: 91%;
+  height: 100%;
   color: white;
 }
 
@@ -158,6 +159,7 @@ button{
   position: relative;
   top: -12px;
   right: 22px;
+  color: white;
 }
 
 .tile {
