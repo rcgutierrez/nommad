@@ -65,6 +65,7 @@ class MapContainer extends Component {
     console.log('component did update');
   }
 
+
   render() {
     console.log(this.props.trucks);
 
@@ -78,6 +79,7 @@ class MapContainer extends Component {
         lng: this.props.trucks[0].coordinates.longitude
       };
     }
+
     var truckComponents = this.props.trucks.map((truckData) => <Marker key={truckData.id}
       name={truckData.name} info={this.props.trucks.name} onClick={this.onMarkerClick} position={{lat:truckData.coordinates.latitude, lng:truckData.coordinates.longitude }}  icon={{url: require('../images/truck.svg')}} />);
 
