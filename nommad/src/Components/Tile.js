@@ -46,6 +46,7 @@ class Tile extends Component {
       };
     // var {number} = this.props;
 
+
     return (
 
         <div className="tile" style={ sectionStyle } onClick={this._showProfile}>
