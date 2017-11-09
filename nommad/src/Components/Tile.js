@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Profile from './Profile';
-// import axios from 'axios';
 
 class Tile extends Component {
   constructor(props){
@@ -39,8 +38,9 @@ class Tile extends Component {
 
   render() {
     let sectionStyle = {
-        width: "100%",
-        height: "100%",
+        width: "275px !important",
+        minHeight: "200px",
+        maxHeight: "200px",
         backgroundImage: `url(${this.state.truck.image_url})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -57,7 +57,7 @@ class Tile extends Component {
           </div>
           <h4 style={{display: this.state.isProfileShowing ? 'none' : 'block'}}>{this.state.truck.name}</h4>
 
-          <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none', height: '50vh'}}>
+          <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none'}}>
             <Profile truck={this.state.truck} />
           </div>
         </div>
