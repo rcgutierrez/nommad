@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Profile from './Profile';
-import axios from 'axios';
+// import axios from 'axios';
 
 class Tile extends Component {
   constructor(props){
@@ -19,7 +19,8 @@ class Tile extends Component {
 
   _addNom() {
     this.setState({
-      nomCount: this.state.nomCount+=1
+      // nomCount: this.state.nomCount+=1
+      nomCount: this.state.nomCount+=1,
     })
     console.log(this.state.nomCount);
   }
@@ -45,11 +46,13 @@ class Tile extends Component {
         backgroundPosition: "center",
         textShadow: "0px 0px 2px white"
       };
+    // var {number} = this.props;
 
     return (
 
         <div className="tile" style={ sectionStyle } onClick={this._showProfile}>
           <div className="iconContainer" onClick={this._addNom}>
+            <div className="score">{this.state.nomCount}</div>
             <img src={require('../images/nom.svg')} className="nom" alt="" />
             <img src={require('../images/bubble.svg')} className="bubble" alt=""/>
           </div>

@@ -20,19 +20,19 @@ class Profile extends Component {
     let stars;
     switch(rating) {
     case 1:
-        stars = <img src={'/yelp_stars/web_and_ios/small/small_1.png'} />
+        stars = <img src={'/yelp_stars/web_and_ios/small/small_1.png'} alt="" />
         break;
     case 2:
-        stars = <img src={'/yelp_stars/web_and_ios/small/small_2.png'} />
+        stars = <img src={'/yelp_stars/web_and_ios/small/small_2.png'} alt="" />
         break;
     case 3:
-        stars = <img src={'/yelp_stars/web_and_ios/small/small_3.png'} />
+        stars = <img src={'/yelp_stars/web_and_ios/small/small_3.png'} alt="" />
         break;
     case 4:
-        stars = <img src={'/yelp_stars/web_and_ios/small/small_4.png'} />
+        stars = <img src={'/yelp_stars/web_and_ios/small/small_4.png'} alt="" />
         break;
     case 5:
-        stars = <img src={'/yelp_stars/web_and_ios/small/small_5.png'} />
+        stars = <img src={'/yelp_stars/web_and_ios/small/small_5.png'} alt="" />
         break;
     default:
       stars = '¯\\_(ツ)_/¯'
