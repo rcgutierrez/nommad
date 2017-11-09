@@ -15,51 +15,49 @@ class Nommad extends Component {
     this.getFoodTruck = this.getFoodTruck.bind(this);
     this.getZipCode = this.getZipCode.bind(this);
   }
-        componentDidMount() {
-          this.getFoodTruck('78701');
-        }
-        getFoodTruck(zip) {
-          this.setState({
-            isFetchingTrucks: true
-          })
-          const yelpApi = 'https://nommad-backend.herokuapp.com/api/' + zip;
-          axios.get(yelpApi)
-             .then((response) => {
-               console.log(`response gathered `, response.data.businesses.length);
-               let trucksArr = response.data.businesses;
-               this.setState({
-                 getRequestData: trucksArr
-               })
-               //Re render it in UI
-             }).catch(error => {
-               console.log(`Error, ${error}`);
-          });
-        }
-        getZipCode(e) {
-          e.preventDefault();
-          this.setState({
-            getRequestData: ''
-          });
-          let truckInfoArr = [];
 
-          let zip = document.querySelector("input").value;
-          this.getFoodTruck(zip);
-          let data = this.state.getRequestData;
-            console.log(zip, ' zip');
-            data.forEach(obj => {
-              // console.log(typeof obj.location.zip_code, ' objects')
-              if(obj.location.zip_code === zip) {
-                console.log(`Data match`)
-                truckInfoArr.push(obj);
-              }
-            })
+  componentDidMount() {
+    this.getFoodTruck('78701');
+  }
 
-            console.log(truckInfoArr, ' data info')
-            this.setState({
-              getRequestData: truckInfoArr,
-            });
-          let message = document.querySelector(".nav-bar").append(`Displaying food trucks in area code ${zip}`)
+  getFoodTruck(zip) {
+    this.setState({
+      isFetchingTrucks: true
+    });
+    const yelpApi = 'https://nommad-backend.herokuapp.com/api/' + zip;
+    axios.get(yelpApi)
+       .then((response) => {
+         console.log(`response gathered `, response.data.businesses.length);
+         let trucksArr = response.data.businesses;
+         this.setState({
+           getRequestData: trucksArr
+         })
+         //Re render it in UI
+       }).catch(error => {
+         console.log(`Error, ${error}`);
+    });
+  }
+
+  getZipCode(e) {
+    e.preventDefault();
+    this.setState({
+      getRequestData: ''
+    });
+    let truckInfoArr = [];
+
+    let zip = document.querySelector("input").value;
+    this.getFoodTruck(zip);
+    let data = this.state.getRequestData;
+      data.forEach(obj => {
+        if(obj.location.zip_code === zip) {
+          truckInfoArr.push(obj);
         }
+      })
+    this.setState({
+      getRequestData: truckInfoArr,
+    });
+    let message = document.querySelector(".nav-bar").append(`Displaying food trucks in area code ${zip}`)
+  }
 
   render() {
     let truckInfo = this.state.getRequestData;
@@ -67,7 +65,6 @@ class Nommad extends Component {
     for (var i = 0; i < truckInfo.length; i++){
       truckInfoArr.push(truckInfo[i]);
     }
-
     return (
       <div className="App">
         <div className="nav-bar">
@@ -80,12 +77,8 @@ class Nommad extends Component {
           </div>
           <br />
           <br />
-
         </div>
-
         <DisplayContainerDesktop trucks={truckInfoArr} ref="child"/>
-
-
         <footer className="clearfix">
           <p>Made with <span className="heart">♥︎</span> at General Assembly by Karla, Natasha, Raul, and Sofia with Yelp Fusion API.</p>
           <p>Nommad logo: <a className="footerLink" href="https://thenounproject.com/term/eat/880686/">"Eat"</a> by Llisole, from <a className="footerLink" href="http://thenounproject.com/">the Noun Project</a>.</p>

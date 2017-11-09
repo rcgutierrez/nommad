@@ -8,20 +8,8 @@ class Tile extends Component {
     this.state = {
       truck: this.props.truck,
       isProfileShowing: false,
-      nomCount: 0
-
     }
     this._showProfile = this._showProfile.bind(this);
-    this._addNom = this._addNom.bind(this);
-  }
-
-
-  _addNom() {
-    this.setState({
-      // nomCount: this.state.nomCount+=1
-      nomCount: this.state.nomCount+=1,
-    })
-    console.log(this.state.nomCount);
   }
 
   _showProfile() {
@@ -45,17 +33,15 @@ class Tile extends Component {
         backgroundSize: "cover",
         backgroundPosition: "center",
       };
-    // var {number} = this.props;
-
 
     return (
 
         <div className="tile" style={ sectionStyle } onClick={this._showProfile}>
-          <div className="iconContainer" onClick={this._addNom}>
-            <div className="score">{this.state.nomCount}</div>
+        
+          <div className="iconContainer">
             <img src={require('../images/nom.svg')} className="nom" alt="" />
-            <img src={require('../images/bubble.svg')} className="bubble" alt=""/>
           </div>
+
           <h4 style={{display: this.state.isProfileShowing ? 'none' : 'block'}}>{this.state.truck.name} + </h4>
 
           <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none'}}>
