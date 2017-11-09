@@ -16,6 +16,7 @@ class Profile extends Component {
 
 
   render() {
+    // console.log(this.state.truck);
     let rating = Math.round(this.state.truck.rating);
     let stars;
     switch(rating) {
@@ -43,9 +44,9 @@ class Profile extends Component {
 
 
         <section className="main-info">
-            <h2>{this.state.truck.name}</h2>
+            <h2><a href={this.state.truck.url}>{this.state.truck.name}</a></h2>
             <h5>Price: {this.state.truck.price ? this.state.truck.price : '¯\\_(ツ)_/¯' }</h5>
-            <p>{this.state.truck.isClosed ? 'Closed' : 'Open'}</p>
+            <p>{this.state.truck.isClosed ? 'Sorry, this truck is permantly closed' : ''}</p>
         </section>
 
         <section className="bio">
