@@ -1,6 +1,7 @@
 html, body{
   margin: 0 auto;
   background-color: #E10A53;
+  max-width: 1500px;
 }
 
 .App{
