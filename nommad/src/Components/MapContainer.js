@@ -66,8 +66,8 @@ class MapContainer extends Component {
   }
 
 
-
   render() {
+    console.log(this.props.trucks);
 
     var mapCenter = { // default to downtown Austin
           lat:30.267153,

@@ -34,7 +34,8 @@ class Nommad extends Component {
                console.log(`Error, ${error}`);
           });
         }
-        getZipCode() {
+        getZipCode(e) {
+          e.preventDefault();
           this.setState({
             getRequestData: ''
           });
@@ -61,7 +62,6 @@ class Nommad extends Component {
     let truckInfo = this.state.getRequestData;
     let truckInfoArr = [];
     for (var i = 0; i < truckInfo.length; i++){
-      // let truck = truckInfo[i];
       truckInfoArr.push(truckInfo[i]);
     }
     return (
@@ -69,14 +69,23 @@ class Nommad extends Component {
         <div className="nav-bar">
           <Nav />
           <div className="search">
-            <input type="text" placeholder="Search by Zip Code"></input>
-            <button type="submit" onClick={this.getZipCode}>Search</button>
+            <form onSubmit={this.getZipCode}>
+              <input type="text" placeholder=" Search by Zip Code or City"></input>
+              <button type="submit" onClick={this.getZipCode}>Search</button>
+            </form>
           </div>
         </div>
 
         <DisplayContainerDesktop trucks={truckInfoArr} />
 
 
+        <footer className="clearfix">
+          <p>Made with <span className="heart">♥︎</span> at General Assembly by Karla, Natasha, Raul, and Sofia with Yelp Fusion API.</p>
+          <div>
+            <img src={require('./images/yelp-logo.png')} id="yelp-logo" alt="yelp logo" />
+            <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_gray-128.png" id="github-logo" alt="github logo" />
+          </div>
+        </footer>
       </div>
     );
   }
