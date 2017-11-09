@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Profile from './Profile';
-// import axios from 'axios';
 
 class Tile extends Component {
   constructor(props){
@@ -39,8 +38,9 @@ class Tile extends Component {
 
   render() {
     let sectionStyle = {
-        width: "100%",
-        height: "100%",
+        width: "275px !important",
+        minHeight: "200px",
+        maxHeight: "200px",
         backgroundImage: `url(${this.state.truck.image_url})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
