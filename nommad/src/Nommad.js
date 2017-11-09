@@ -3,9 +3,7 @@ import axios from 'axios';
 import './css/default.css';
 import Nav from './Components/Nav';
 import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
-import Profile from './Components/Profile';
-import MapContainer from './Components/MapContainer';
-//sophia delete this
+
 class Nommad extends Component {
   constructor(props){
     super(props);
@@ -64,7 +62,6 @@ class Nommad extends Component {
     let truckInfo = this.state.getRequestData;
     let truckInfoArr = [];
     for (var i = 0; i < truckInfo.length; i++){
-      let truck = truckInfo[i];
       truckInfoArr.push(truckInfo[i]);
     }
     return (
@@ -73,7 +70,7 @@ class Nommad extends Component {
           <Nav />
           <div className="search">
             <form onSubmit={this.getZipCode}>
-              <input type="text" placeholder="Search by Zip Code"></input>
+              <input type="text" placeholder=" Search by Zip Code or City"></input>
               <button type="submit" onClick={this.getZipCode}>Search</button>
             </form>
           </div>
