@@ -1,6 +1,7 @@
 html, body{
   margin: 0 auto;
-  background-color: black;
+  background-color: #E10A53;
+  max-width: 1500px;
 }
 
 .App{
@@ -15,16 +16,15 @@ html, body{
   max-height: 100px;
 }
 
-
 .Nav{
  flex:30%;
- background-color: black;
+ background-color: #E10A53;
  padding: 25px;
 }
 
 .search{
   flex:70%;
-  background-color: black;
+  background-color: #E10A53;
   justify-content: space-between;
   padding: 15px;
 }
@@ -45,9 +45,10 @@ html, body{
 }
 
 .profile{
-  background: linear-gradient(left top, rgba(0,0,0, 0.7), rgba(0,0,0, 0.01));
-  padding: 15px;
-  width: 100%;
+  position: absolute;
+  background: linear-gradient(to right, rgba(0,0,0, 0.7), rgba(0,0,0, 0.01));
+  padding: 5px;
+  width: 91%;
   color: white;
 }
 
@@ -56,10 +57,10 @@ html, body{
 }
 
 h4{
-  background: linear-gradient(top, rgba(0,0,0, 0.7), rgba(0,0,0, 0.001));
-  width: 100%;
+  background: linear-gradient(to right, rgba(0,0,0, 0.7), rgba(0,0,0, 0.001));
+  width: auto;
   margin: 0 auto;
-  padding: 15px;
+  padding: 10px;
   color: white;
 }
 
@@ -82,14 +83,14 @@ input[type=text]{
     font-family:'Nunito', sans-serif;
     font-size: 16px;
     text-align: left;
-    color: #000000;
+    color: #E10A53;
 }
 
 button{
     margin: 20px;
     font-size: 14px;
     font-weight: bold;
-    color:white;
+    color: white;
     padding:10px 30px;
     border: 2px solid #B0E0E6;
     background: #75ead0;
@@ -102,19 +103,20 @@ button{
 
 .displayContainerDesktop {
   flex: 1;
-   padding: 5px;
-   display: flex;
-   background-color: #000000;
+  padding: 5px;
+  display: flex;
+  background-color: #E10A53;
 }
 
 .resultTiles{
   flex: 50%;
   position: relative;
   height: 725px;
-  display: flex;
-  flex-direction: column;
   overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
   padding: 0 5px;
+  flex-wrap: wrap;
 }
 
 .resultMap{
@@ -125,6 +127,7 @@ button{
 }
 
 .map {
+  display: none;
   flex: 1;
   flex-grow: 2;
   width: 100%;
@@ -149,9 +152,16 @@ button{
 }
 
 .tile {
+  flex-shrink: 0;
+  flex-grow: 0;
+  flex-basis: 25%;
+  min-width: 200px !important;
+  margin: 10px;
   flex: 1;
+  overflow-y: scroll;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
   opacity: 0.9;
   background-color: #ffffff;
 }
@@ -167,10 +177,22 @@ a {
 
 footer {
     font-family:'Nunito', sans-serif;
-    background-color: black;
+    background-color: #E10A53;
     text-align: center;
     color: white;
     font-size: 1rem;
+}
+
+img#yelp-logo{
+  display: inline;
+  height: 5%;
+  width: 5%;
+}
+
+img#github-logo{
+  display: inline;
+  height: 3%;
+  width: 3%;
 }
 
 #clearfix:after {
@@ -182,6 +204,31 @@ footer {
   font-size: 0;
 }
 
-
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 950px) {
+  .nommad-logo-lrg, .nom-icon{
+    padding-top: 20px;
+    height: 50%;
+    width: 50%;
   }
+
+  .displayContainerDesktop{
+    flex-direction: column;
+    flex-grow: 100;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .displayContainerDesktop{
+    flex-direction: column;
+  }
+
+  .search{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  button{
+    font-size: 10px;
+  }
+}
