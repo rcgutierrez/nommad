@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+// import axios from 'axios';
+import ReactDOM from 'react-dom';
 
 class MapContainer extends Component {
- constructor(props) {
-    super(props);
 
+
+  constructor(props) {
+    super(props);
     this.state = {
       showingInfoWindow: false,
       activeMarker: {},
       selectedPlace: {},
-      trucksArr: this.props.trucks
+      trucksArr: this.props.trucks,
     }
 
     // binding this to event-handler functions
@@ -17,12 +20,18 @@ class MapContainer extends Component {
     this.onMapClicked = this.onMapClicked.bind(this);
   }
 
+  componentDidMount() {
+    console.log("Component mounted!");
+  }
+
+
+
   onMarkerClick(props, marker, e) {
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
       showingInfoWindow: true
-    });
+    })
   }
 
   onInfoWindowClose(){
@@ -41,42 +50,50 @@ class MapContainer extends Component {
     }
   }
 
-  componentDidMount(){
-     console.log(this.props.trucks);
+
+
+  componentWillMount(){
+    console.log('component currently mounting');
   }
 
-// fetchPlaces(mapProps, map) {
-//   const google = mapProps;
-//   const service = new google.maps.places.PlacesService(map);
-//   // ...
-// };
 
+  componentWillUpdate(){
+    console.log('component updated!');
+  }
 
+  componentDidUpdate(){
+    console.log('component did update');
+  }
+
+<<<<<<< HEAD
+    console.log(this.props.trucks);
+=======
   render() {
 
-    console.log(this.props.trucks);
+    var mapCenter = { // default to downtown Austin
+          lat:30.267153,
+          lng:-97.743061
+        };
+    if (this.props.trucks.length) {
+      mapCenter = { // move to first truck position
+        lat: this.props.trucks[0].coordinates.latitude,
+        lng: this.props.trucks[0].coordinates.longitude
+      };
+    }
+>>>>>>> e7a301d078272f003d1c0a9eebc26b26d901f575
     var truckComponents = this.props.trucks.map((truckData) => <Marker key={truckData.id}
       name={truckData.name} info={this.props.trucks.name} onClick={this.onMarkerClick} position={{lat:truckData.coordinates.latitude, lng:truckData.coordinates.longitude }}  icon={{url: require('../images/truck.svg')}} />);
 
 
-    // const {props, state} = this,
-    //       {mapStyles} = props;
-
-   const {props} = this,
-          {mapStyles} = props;
-
+    const {props} = this, {mapStyles} = props;
 
     return (
      <Map google={this.props.google}
         onClick={this.onMapClicked}
-        onReady={this.fetchPlaces}
         styles={mapStyles}
-        initialCenter={{
-          lat: 30.267153,
-          lng: -97.743061
-        }}
-        zoom={14}
-        className={'map'}>
+        center={mapCenter}
+        zoom={12}>
+
         {truckComponents }
 
         <InfoWindow
