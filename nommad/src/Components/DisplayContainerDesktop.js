@@ -23,12 +23,12 @@ class DisplayContainerDesktop extends Component {
       this.setState({
         message: ''
       })
-    }, 1000);
+    }, 500);
     setTimeout(() => {
       this.setState({
         message: <div className="message"><p>There are no food trucks near that location.</p><img alt="sobbing emoji" src="https://emojipedia-us.s3.amazonaws.com/thumbs/120/apple/114/loudly-crying-face_1f62d.png"/></div>
       })
-    }, 2500);
+    }, 1500);
   }
 
   onSearch(){
