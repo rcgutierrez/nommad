@@ -57,7 +57,7 @@ class Tile extends Component {
           </div>
           <h4 style={{display: this.state.isProfileShowing ? 'none' : 'block'}}>{this.state.truck.name}</h4>
 
-          <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none', height: '50vh'}}>
+          <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none'}}>
             <Profile truck={this.state.truck} />
           </div>
         </div>
