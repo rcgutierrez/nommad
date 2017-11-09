@@ -74,8 +74,8 @@ class Nommad extends Component {
           <Nav />
           <div className="search">
             <form onSubmit={this.getZipCode}>
-              <input type="text" placeholder="Search by Zip Code or City"></input>
-              <button type="submit" onClick={this.getZipCode}>Search</button>
+              <input type="text" placeholder=" Search by Zip Code or City"></input>
+              <button type="submit" onClick={() => this.refs.child.onSearch()}>Search</button>
             </form>
           </div>
           <br />
@@ -83,11 +83,12 @@ class Nommad extends Component {
 
         </div>
 
-        <DisplayContainerDesktop trucks={truckInfoArr} />
+        <DisplayContainerDesktop trucks={truckInfoArr} ref="child"/>
 
 
         <footer className="clearfix">
           <p>Made with <span className="heart">♥︎</span> at General Assembly by Karla, Natasha, Raul, and Sofia with Yelp Fusion API.</p>
+          <p>Nommad logo: <a className="footerLink" href="https://thenounproject.com/term/eat/880686/">"Eat"</a> by Llisole, from <a className="footerLink" href="http://thenounproject.com/">the Noun Project</a>.</p>
           <div>
             <img src={require('./images/yelp-logo.png')} id="yelp-logo" alt="yelp logo" />
             <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_gray-128.png" id="github-logo" alt="github logo" />
