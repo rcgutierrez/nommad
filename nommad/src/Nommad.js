@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './css/default.css';
 import Nav from './Components/Nav';
-import DisplayContainerMobile from './Components/DisplayContainerMobile';
 import DisplayContainerDesktop from './Components/DisplayContainerDesktop';
 import Profile from './Components/Profile';
 import MapContainer from './Components/MapContainer';

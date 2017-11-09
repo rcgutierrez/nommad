@@ -44,7 +44,7 @@ html, body{
 }
 
 .profile{
-  background: linear-gradient(left, rgba(0,0,0, 0.7), rgba(0,0,0, 0.01));
+  background: linear-gradient(to right, rgba(0,0,0, 0.7), rgba(0,0,0, 0.01));
   padding: 15px;
   width: 100%;
   color: white;
@@ -55,8 +55,8 @@ html, body{
 }
 
 h4{
-  background: linear-gradient(top, rgba(0,0,0, 0.7), rgba(0,0,0, 0.001));
-  width: 100%;
+  background: linear-gradient(to right, rgba(0,0,0, 0.7), rgba(0,0,0, 0.001));
+  width: auto;
   margin: 0 auto;
   padding: 15px;
   color: white;
