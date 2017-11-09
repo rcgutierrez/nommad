@@ -114,6 +114,7 @@ button{
   flex-direction: column;
   overflow-y: scroll;
   padding: 0 5px;
+  flex-wrap: wrap;
 }
 
 .resultMap{
