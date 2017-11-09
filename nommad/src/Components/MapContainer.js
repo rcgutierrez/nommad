@@ -63,8 +63,6 @@ class MapContainer extends Component {
 
   componentDidUpdate(){
     console.log('component did update');
-
-
   }
 
   render() {

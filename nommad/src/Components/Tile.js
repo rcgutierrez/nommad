@@ -44,7 +44,6 @@ class Tile extends Component {
         backgroundImage: `url(${this.state.truck.image_url})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        textShadow: "0px 0px 2px white"
       };
     // var {number} = this.props;
 
