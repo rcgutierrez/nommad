@@ -10,7 +10,8 @@ class Nommad extends Component {
     super(props);
     this.state = {
       isFetchingTrucks: false,
-      getRequestData: ''
+      getRequestData: '',
+      getMessage: '',
     }
     this.getFoodTruck = this.getFoodTruck.bind(this);
     this.getZipCode = this.getZipCode.bind(this);
@@ -55,8 +56,8 @@ class Nommad extends Component {
       })
     this.setState({
       getRequestData: truckInfoArr,
+      getMessage: `Displaying food trucks in area code ${zip}`
     });
-    let message = document.querySelector(".nav-bar").append(`Displaying food trucks in area code ${zip}`)
   }
 
   render() {
@@ -76,7 +77,7 @@ class Nommad extends Component {
             </form>
           </div>
           <br />
-          <br />
+          <h4>{this.state.getMessage}</h4>
         </div>
         <DisplayContainerDesktop trucks={truckInfoArr} ref="child"/>
         <footer className="clearfix">
