@@ -56,7 +56,7 @@ class Nommad extends Component {
       })
     this.setState({
       getRequestData: truckInfoArr,
-      getMessage: `Displaying food trucks in area code ${zip}`
+      getMessage: `Displaying food trucks in ${zip}`
     });
   }
 
@@ -77,7 +77,7 @@ class Nommad extends Component {
             </form>
           </div>
           <br />
-          <h4 className="zip-message">{this.state.getMessage}</h4>
+          <p id="display-trucks-area-msg">{this.state.getMessage}</p>
         </div>
         <DisplayContainerDesktop trucks={truckInfoArr} ref="child"/>
         <footer className="clearfix">
