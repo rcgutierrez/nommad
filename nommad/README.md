@@ -6,7 +6,7 @@ Nommad is a food-truck finder app that helps foodies efficiently search for the 
 
 Created by Raul Gutierrez, Sophia Chow, Natasha Robarge, and Karla Moreno.
 
-![Nommad App](src/images/nommadscreenshotpage.png "Nommad App")
+![Nommad App](src/images/NommadScreenShot.png "Nommad App")
 
 ## How To Use
 - You can easily search for food trucks in the search bar by zipcode and/or city name. Our app will automatically render a maximium of 20 food trucks within a 1 mile radius of the search. When you click on the tile/food truck of your choice, it will take you to the Yelp page for more information. 
