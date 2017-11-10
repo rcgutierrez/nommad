@@ -6,21 +6,7 @@ class Tile extends Component {
     super(props);
 
     this.state = {
-      truck: this.props.truck,
-      isProfileShowing: false,
-    }
-    this._showProfile = this._showProfile.bind(this);
-  }
-
-  _showProfile() {
-    if(!this.state.isProfileShowing){
-      this.setState({
-        isProfileShowing: true
-      })
-    }else{
-      this.setState({
-        isProfileShowing: false
-      })
+      truck: this.props.truck
     }
   }
 
@@ -36,15 +22,12 @@ class Tile extends Component {
 
     return (
 
-        <div className="tile" style={ sectionStyle } onClick={this._showProfile}>
-        
+        <div className="tile" style={ sectionStyle }>
+
           <div className="iconContainer">
             <img src={require('../images/nom.svg')} className="nom" alt="" />
           </div>
-
-          <h4 style={{display: this.state.isProfileShowing ? 'none' : 'block'}}>{this.state.truck.name} + </h4>
-
-          <div className="profilePage" style={{display: this.state.isProfileShowing ? 'flex' : 'none'}}>
+          <div className="profilePage">
             <Profile truck={this.state.truck} />
           </div>
         </div>
