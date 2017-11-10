@@ -112,6 +112,10 @@ button {
   box-sizing: border-box;
 }
 
+button:hover {
+  background: #508991;
+}
+
 .displayContainerDesktop {
   flex: 1;
   padding: 5px;
@@ -221,14 +225,10 @@ footer {
 
 img #yelp-logo{
   display: inline;
-  height: 5%;
-  width: 5%;
 }
 
 img #github-logo{
   display: inline;
-  height: 3%;
-  width: 3%;
 }
 
 #clearfix:after {
@@ -247,6 +247,16 @@ img #github-logo{
 }
 
 @media only screen and (max-width: 950px) {
+
+  input[type=text] {
+    font-size: 16px;
+    min-width: 215px;
+  }
+
+  form {
+    padding-left: 15px;
+  }
+
   .map {
     visibility: hidden;
   }
