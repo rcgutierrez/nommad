@@ -13,7 +13,7 @@ html, body {
 }
 
 .nav-bar {
-  display:flex;
+  display: flex;
   flex-direction: row;
   max-height: 100px;
   text-align: left;
@@ -55,19 +55,26 @@ html, body {
   padding: 5px;
   width: 91%;
   height: 100%;
-  color: white;
+  color: #fff;
 }
 
 .ratings p img {
   max-width: 75%
 }
 
-h4{
+.zip-message {
+  color: #fff;
+  background: none;
+  padding: 20px 0px;
+  margin-top: 18px;
+}
+
+h4 {
   background: linear-gradient(to right bottom, rgba(0,0,0, 0.7), rgba(0,0,0, 0.0001));
   width: auto;
   margin: 0 auto;
   padding: 10px;
-  color: white;
+  color: #fff;
 }
 
 h3 {
@@ -82,8 +89,6 @@ h3 {
 
 input[type=text] {
   width:50%;
-/*margin: 10px 40px 10px 80px;
-  padding: 5px 70px 5px 5px;*/
   display: inline-block;
   box-sizing: border-box;
   font-family:'Nunito', sans-serif;
@@ -96,7 +101,7 @@ button {
   margin: 20px;
   font-size: 14px;
   font-weight: bold;
-  color: white;
+  color: #fff;
   padding:10px 30px;
   border: 2px solid #B0E0E6;
   background: #75ead0;
@@ -139,7 +144,7 @@ button {
   width: 100%;
 }
 
-.iconContainer{
+.iconContainer {
   float: right;
 }
 
@@ -164,7 +169,7 @@ button {
   position: relative;
   top: -12px;
   right: 22px;
-  color: white;
+  color: #fff;
 }
 
 .tile {
@@ -178,12 +183,12 @@ button {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
-  background-color: #ffffff;
+  background-color: #fff;
   z-index: 10;
 }
 
-.message{
-  color: white;
+.message {
+  color: #fff;
   font-size: 125%;
   width: 200px;
   overflow-wrap: break-word;
@@ -210,11 +215,11 @@ footer {
   font-size: 1rem;
 }
 
-.footerLink{
+.footerLink {
   text-decoration: underline;
 }
 
-img#yelp-logo{
+img #yelp-logo{
   display: inline;
   height: 5%;
   width: 5%;
@@ -236,13 +241,12 @@ img #github-logo{
 }
 
 @media (max-width:400px) and (min-width:900px) {
-    .map {
-        display: none;
-    }
+  .map {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 950px) {
-
   .map {
     visibility: hidden;
   }

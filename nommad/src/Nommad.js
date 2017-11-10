@@ -77,7 +77,7 @@ class Nommad extends Component {
             </form>
           </div>
           <br />
-          <h4>{this.state.getMessage}</h4>
+          <h4 className="zip-message">{this.state.getMessage}</h4>
         </div>
         <DisplayContainerDesktop trucks={truckInfoArr} ref="child"/>
         <footer className="clearfix">
